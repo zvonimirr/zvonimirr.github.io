@@ -3,6 +3,7 @@ import { validate } from "email-validator";
 import React, { useState } from "react";
 import { IoMdContact } from "react-icons/io";
 import { toast } from "react-toastify";
+import { useWindowSize } from "react-use";
 import { PageContainer } from "../Global/GlobalComponents";
 import {
   Container,
@@ -24,7 +25,9 @@ function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const textAreaHeightLimit = window.innerHeight - 600;
+  const { height } = useWindowSize();
+
+  const textAreaHeightLimit = height - 600;
 
   const createNotification = (
     message: string,
