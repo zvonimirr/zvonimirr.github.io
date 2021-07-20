@@ -24,6 +24,8 @@ function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const textAreaHeightLimit = window.innerHeight - 600;
+
   const createNotification = (
     message: string,
     notificationType: NotificationType = NotificationType.INFO
@@ -124,6 +126,14 @@ function ContactForm() {
             <TextArea
               rows={3}
               value={message}
+              onInput={(e) => {
+                (e.target as HTMLElement).style.height = "";
+                (e.target as HTMLElement).style.height =
+                  Math.min(
+                    (e.target as HTMLElement).scrollHeight,
+                    textAreaHeightLimit
+                  ) + "px";
+              }}
               onChange={(e) => {
                 setMessage(e.target.value);
               }}
