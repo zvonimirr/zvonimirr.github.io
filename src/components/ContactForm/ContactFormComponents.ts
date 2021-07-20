@@ -74,6 +74,7 @@ export const TextArea = styled.textarea`
   font-weight: 300;
   padding: 0.5rem;
   color: ${Global.colors.text.primary};
+  resize: none;
 `;
 
 export const SubmitButton = styled.div<ButtonProps>`
