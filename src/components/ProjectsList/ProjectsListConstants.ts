@@ -64,7 +64,6 @@ export const Projects: Project[] = [
     Boosting is when you pay someone else to play a game for you in order to increase your in-game rank.`,
     Year: "Sep. 2020",
     Image: RaiseYourDivision,
-    URL: "https://raiseyourdivision.com/",
     Technologies: [
       {
         Icon: DiReact,
