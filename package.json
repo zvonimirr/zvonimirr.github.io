@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && ./scripts/add_seo.py",
     "serve": "vite preview",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b gh-pages -d dist"
