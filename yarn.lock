@@ -276,6 +276,18 @@
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.9.tgz#1cfb6d60ef3822c589f18e70f8b12f9a28ce8724"
   integrity sha512-MUc6zSmU3tEVnkQ78q0peeEjKWPUADMlC/t++2bI8WnAG2tvYRPIgHG8lWkXwqc8MsUF6Z2MOf+Mh5sazOmhiQ==
 
+"@types/history@^4.7.11":
+  version "4.7.11"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
+  integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
+
+"@types/history@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-5.0.0.tgz#29f919f0c8e302763798118f45b19cab4a886f14"
+  integrity sha512-hy8b7Y1J8OGe6LbAjj3xniQrj3v6lsivCcrmf4TzSgPzLkhIeKgc5IZnT7ReIqmEuodjfO8EYAuoFvIrHi/+jQ==
+  dependencies:
+    history "*"
+
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -313,12 +325,12 @@
   dependencies:
     react-icons "*"
 
-"@types/react-router-dom@^5.1.8":
-  version "5.1.8"
-  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.1.8.tgz#bf3e1c8149b3d62eaa206d58599de82df0241192"
-  integrity sha512-03xHyncBzG0PmDmf8pf3rehtjY0NpUj7TIN46FrT5n1ZWHPZvXz32gUyNboJ+xsL8cpg8bQVLcllptcQHvocrw==
+"@types/react-router-dom@^5.3.3":
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.3.3.tgz#e9d6b4a66fcdbd651a5f106c2656a30088cc1e83"
+  integrity sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==
   dependencies:
-    "@types/history" "*"
+    "@types/history" "^4.7.11"
     "@types/react" "*"
     "@types/react-router" "*"
 
@@ -328,6 +340,14 @@
   integrity sha512-8d7nR/fNSqlTFGHti0R3F9WwIertOaaA1UEB8/jr5l5mDMOs4CidEgvvYMw4ivqrBK+vtVLxyTj2P+Pr/dtgzg==
   dependencies:
     "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-router@^5.1.18":
+  version "5.1.18"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-5.1.18.tgz#c8851884b60bc23733500d86c1266e1cfbbd9ef3"
+  integrity sha512-YYknwy0D0iOwKQgz9v8nOzt2J6l4gouBmDnWqUUznltOTaon+r8US8ky8HvN0tXvc38U9m6z/t2RsVsnd1zM0g==
+  dependencies:
+    "@types/history" "^4.7.11"
     "@types/react" "*"
 
 "@types/react-vertical-timeline-component@^3.0.1":
@@ -753,6 +773,11 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
   integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
+gsap@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.0.0.tgz#06db45840b07b2002234268a0c2e8b8e4bfa0068"
+  integrity sha512-o0dCwQS4N8ulUgE0MgJgzZL03GdvQN3xegBsZTswsbs/JRA4e9XzutXmmXwAuDA/BjfXbRfTe8kov3ci8GM1pw==
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -770,7 +795,7 @@ hey-listen@^1.0.8:
   resolved "https://registry.yarnpkg.com/hey-listen/-/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
   integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
-history@^5.2.0:
+history@*, history@^5.2.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
   integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==

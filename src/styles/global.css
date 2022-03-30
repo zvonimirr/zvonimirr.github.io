@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  background-color: #141414;
 }
 
 .Toastify__toast-body {
