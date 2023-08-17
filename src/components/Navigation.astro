@@ -18,10 +18,28 @@ const links = [
   <ul class="flex flex-row gap-2 justify-end">
     {links.map((link) => {
       return (
-        <li class="font-robotoCondensed hover:underline">
-          <a href={link.url}>{link.label}</a>
+        <li class="font-robotoCondensed">
+          <a class="cursor-pointer hover:underline" href={link.url}>{link.label}</a>
         </li>
       );
     })}
   </ul>
 </nav>
+
+<script>
+  const activeLink = document.querySelector(`a[href="${window.location.pathname}"]`);
+  if (activeLink) {
+    // Remove the underline
+    activeLink.classList.remove("hover:underline");
+    // Disable the link
+    activeLink.removeAttribute("href");
+    // Replace the link with a span
+    activeLink.outerHTML = activeLink.outerHTML.replace(/<a/, '<span').replace(/<\/a>/, '</span>');
+  }
+</script>
+
+<style>
+  ul span {
+    @apply text-blue-500;
+  }
+</style>

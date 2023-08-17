@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         robotoCondensed: ["Roboto Condensed", ...defaultTheme.fontFamily.sans],
+        fjallaOne: ["Fjalla One", ...defaultTheme.fontFamily.sans],
       },
     },
   },
