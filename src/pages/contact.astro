@@ -1,8 +1,14 @@
 ---
+import { Icon } from 'astro-icon';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout>
-  <h1 class="text-4xl mb-4 font-fjallaOne">Contact</h1>
+  <div class="absolute top-0 left-0 w-full h-full bg-gray-500 z-[-10]">
+  <video autoplay loop muted playsinline class="w-full h-full object-cover">
+    <source src="/videos/contact.mp4" type="video/mp4" />
+  </video>
+  </div>
+  <h1 class="text-4xl mb-4 font-fjallaOne text-white">Contact</h1>
   <form class="flex flex-col gap-2">
     <div>
       <label for="name">Name</label>
@@ -19,11 +25,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <textarea name="message" placeholder="Write your message here..." required></textarea>
     </div>
 
-    <button class="border rounded-md p-2 transition-colors ease-in-out duration-500 hover:text-white hover:bg-blue-500" type="submit">Send</button>
+    <button class="flex flex-row gap-2 justify-center items-center border rounded-md p-2 mx-auto w-80 transition-colors ease-in-out duration-500 hover:text-black hover:bg-white" type="submit">
+      <Icon class="w-6 h-6" name="mdi:send" />
+      Send
+    </button>
   </form>
 </BaseLayout>
 
 <style>
+  video {
+    mix-blend-mode: luminosity;
+  }
+
   form div {
     @apply flex flex-col gap-2;
   }
@@ -33,15 +46,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   form label, form button {
-    @apply font-robotoCondensed;
+    @apply font-robotoCondensed text-white;
   }
 
   form input,
   form textarea {
-    @apply border-b-2 border-gray-300;
+    @apply transition-colors ease-in-out duration-500 border-b-4 border-white rounded-md p-2;
 
     &:focus {
-      @apply outline-none border-gray-900;
+      @apply outline-none border-gray-500;
     }
 
     &:not(:placeholder-shown):invalid {
