@@ -1,10 +1,6 @@
 ---
 const links = [
   {
-    label: "Home",
-    url: "/",
-  },
-  {
     label: "Projects",
     url: "/projects",
   },
@@ -20,10 +16,10 @@ const links = [
 
 ---
 <nav>
-  <ul>
+  <ul class="flex flex-row gap-2">
     {links.map((link) => {
       return (
-        <li>
+        <li class="hover:underline">
           <a href={link.url}>{link.label}</a>
         </li>
       );
