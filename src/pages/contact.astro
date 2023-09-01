@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <source src="/videos/contact.mp4" type="video/mp4" />
   </video>
   </div>
-  <h1 class="text-4xl mb-4 font-fjallaOne text-white">Contact</h1>
+  <h1 class="text-4xl mb-4 font-fjallaOne">Contact</h1>
   <form class="flex flex-col gap-2">
     <div>
       <label for="name">Name</label>
@@ -29,9 +29,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <Icon class="w-6 h-6" name="mdi:send" />
       Send
     </button>
-    <span class="text-white text-center">This form is not yet functional. Please use the links in the footer to contact me.</span>
+    <span class="text-center">This form is not yet functional. Please use the links in the footer to contact me.</span>
   </form>
 </BaseLayout>
+
+<script>
+  // Safari doesn't autoplay the video, nor does it mix-blend-mode, so we'll just remove it
+  const userAgent = navigator.userAgent;
+  let browserName;
+         
+  if(userAgent.match(/chrome|chromium|crios/i)){
+    browserName = "chrome";
+  } else if(userAgent.match(/firefox|fxios/i)){
+    browserName = "firefox";
+  } else if(userAgent.match(/safari/i)){
+    browserName = "safari";
+  } else if(userAgent.match(/opr\//i)){
+    browserName = "opera";
+  } else if(userAgent.match(/edg/i)){
+    browserName = "edge";
+  }
+
+  if (browserName === 'safari') {
+    document.querySelector('div:has(video)')?.classList.remove('bg-gray-500');
+    document.querySelector('video')?.remove();
+    document.querySelector('form')?.classList.add('safari');
+  }
+</script>
 
 <style>
   video {
@@ -47,7 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   form label, form button {
-    @apply font-robotoCondensed text-white;
+    @apply font-robotoCondensed;
 
     &:disabled {
       @apply opacity-50;
@@ -66,5 +90,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     &:not(:placeholder-shown):invalid {
       @apply border-red-500;
     }
+  }
+
+  h1 + form:not(.safari),
+  form:not(.safari) label,
+  form:not(.safari) button,
+  form:not(.safari) + span {
+    @apply text-white;
+  }
+
+  form.safari input,
+  form.safari textarea {
+    @apply border-gray-500 border-2;
   }
 </style>
