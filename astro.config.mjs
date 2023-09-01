@@ -16,8 +16,4 @@ export default defineConfig({
     sitemap(),
     robotsTxt(),
   ],
-  experimental: {
-    viewTransitions: true,
-  },
 });
-
