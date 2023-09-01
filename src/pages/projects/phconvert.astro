@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TechStackIcon from '../../components/TechStackIcon.astro';
+---
+<BaseLayout title="PHConvert" mainClass="flex-grow">
+  <h1 class="text-4xl font-bold">PHConvert</h1>
+  <h2 class="text-2xl">A tool to assist with filing taxes in the Philippines</h2>
+
+  <h3 class="text-3xl font-bold mt-4">Tech Stack</h3>
+  <div class="flex flex-row gap-2">
+    <TechStackIcon title="PHP" name="logos:php" />
+    <TechStackIcon title="JavaScript" name="logos:javascript" />
+    <TechStackIcon title="Materialize" name="logos:materializecss" />
+  </div>
+
+  <h3 class="text-3xl font-bold mt-4">Project Goal</h3>
+  <p class="text-lg">
+    The client created an Excel template to help companies and individuals file their taxes in the Philippines.
+  </p>
+  <p class="text-lg">
+    However, the Filipino government requires that the Excel file be converted to a specific format before it can be submitted.
+  </p>
+  <p class="text-lg">
+    Since no tool existed to convert the Excel file to the required format, the client asked me to create one.
+  </p>
+  <img src="/images/projects/phconvert.png" alt="PHConvert" class="w-full rounded my-2" />
+
+  <h3 class="text-3xl font-bold mt-4">Solution</h3>
+  <div class="flex flex-col gap-2">
+    <div>
+      <h4 class="text-lg font-bold">PHP</h4>
+      <p class="text-lg">
+        Client had already purchased a hosting plan with PHP support so I decided to use PHP for the backend.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-lg font-bold">JavaScript</h4>
+      <p class="text-lg">
+        JavaScript was used to add some interactivity to the frontend, like showing a loading indicator when the user clicks the submit button and clearing forms.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-lg font-bold">Materialize</h4>
+      <p class="text-lg">
+        Materialize was used to make the frontend look good. It allowed me to quickly create a responsive website that looks good on both desktop and mobile, and I was able to focus more on the backend logic.
+      </p>
+    </div>
+  </div>
+  <hr class="my-4" />
+  <a href="https://ilovebir.com" target="_blank" rel="noopener noreferrer" class="text-lg underline">https://ilovebir.com</a>
+</BaseLayout>
+
