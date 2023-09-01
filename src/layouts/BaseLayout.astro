@@ -6,7 +6,8 @@ import { cn } from '../utils/cn';
 import '@fontsource/roboto-condensed';
 import '@fontsource/fjalla-one';
 
-const title = Astro.props.title ?? 'Zvonimir Rudinski | Full Stack Web Developer';
+const title = (Astro.props.title ? `${Astro.props.title} - ` : '') + 'Zvonimir Rudinski | Full Stack Web Developer';
+
 const mainClass = cn(
   'w-full h-full p-4',
   Astro.props.mainClass ?? ''

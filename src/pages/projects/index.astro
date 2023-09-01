@@ -1,6 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Project from '../../components/Project.astro';
+import { projects } from '../../utils/projects';
+
+const sortedProjects = projects.sort((a, b) => {
+  return new Date(b.date) - new Date(a.date);
+});
+
 ---
-<BaseLayout mainClass="flex-grow">
-  <h1>List of projects</h1>
+<BaseLayout title="Projects" mainClass="flex-grow">
+  <h1 class="text-4xl font-bold">List of projects</h1>
+  {/* Grid of projects with autofit of minimum 300px */}
+  <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {sortedProjects.map((project) => (
+      <Project {...project} />
+    ))}
+  </div>
 </BaseLayout>
