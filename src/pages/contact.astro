@@ -92,7 +92,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   }
 
-  h1 + form:not(.safari),
+  h1:has(+ form:not(.safari)),
   form:not(.safari) label,
   form:not(.safari) button,
   form:not(.safari) + span {
