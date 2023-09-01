@@ -1,11 +1,16 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { cn } from '../utils/cn';
 
 import '@fontsource/roboto-condensed';
 import '@fontsource/fjalla-one';
 
 const title = Astro.props.title ?? 'Zvonimir Rudinski | Full Stack Web Developer';
+const mainClass = cn(
+  'w-full h-full p-4',
+  Astro.props.mainClass ?? ''
+);
 ---
 
 <html lang="en">
@@ -18,7 +23,7 @@ const title = Astro.props.title ?? 'Zvonimir Rudinski | Full Stack Web Developer
 	</head>
   <body class="flex flex-col w-full min-h-screen justify-between">
     <Header />
-    <main class="w-full h-full p-4">
+    <main class={mainClass}>
       <slot />
     </main>
     <Footer />

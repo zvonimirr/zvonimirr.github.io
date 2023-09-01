@@ -7,4 +7,3 @@ export default defineConfig({
   site: "https://zvonimirr.github.io",
   integrations: [tailwind()],
 });
-
