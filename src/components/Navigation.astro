@@ -26,23 +26,7 @@ const links = [
   </ul>
 </nav>
 
-<script>
-  const activeLink = document.querySelector(`a[href="${window.location.pathname}"]`);
-  if (activeLink) {
-    // Remove the underline
-    activeLink.classList.remove("hover:underline");
-    // Disable the link
-    activeLink.removeAttribute("href");
-    // Replace the link with a span
-    activeLink.outerHTML = activeLink.outerHTML.replace(/<a/, '<span').replace(/<\/a>/, '</span>');
-  }
-</script>
-
 <style>
-  ul span {
-    @apply text-gray-400;
-  }
-
   ul a {
     @apply transition-colors ease-in-out duration-500;
 
