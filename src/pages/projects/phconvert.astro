@@ -1,11 +1,14 @@
 ---
-import { Img } from 'astro-imagetools/components';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import TechStackIcon from '../../components/TechStackIcon.astro';
+import { Img } from "astro-imagetools/components";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TechStackIcon from "../../components/TechStackIcon.astro";
 ---
+
 <BaseLayout title="PHConvert" mainClass="flex-grow">
   <h1 class="text-4xl font-bold" transition:name="PHConvert">PHConvert</h1>
-  <h2 class="text-2xl">A tool to assist with filing taxes in the Philippines</h2>
+  <h2 class="text-2xl">
+    A tool to assist with filing taxes in the Philippines
+  </h2>
 
   <h3 class="text-3xl font-bold mt-4">Tech Stack</h3>
   <div class="flex flex-row gap-2">
@@ -16,13 +19,16 @@ import TechStackIcon from '../../components/TechStackIcon.astro';
 
   <h3 class="text-3xl font-bold mt-4">Project Goal</h3>
   <p class="text-lg">
-    The client created an Excel template to help companies and individuals file their taxes in the Philippines.
+    The client created an Excel template to help companies and individuals file
+    their taxes in the Philippines.
   </p>
   <p class="text-lg">
-    However, the Filipino government requires that the Excel file be converted to a specific format before it can be submitted.
+    However, the Filipino government requires that the Excel file be converted
+    to a specific format before it can be submitted.
   </p>
   <p class="text-lg">
-    Since no tool existed to convert the Excel file to the required format, the client asked me to create one.
+    Since no tool existed to convert the Excel file to the required format, the
+    client asked me to create one.
   </p>
   <Img src="/images/projects/phconvert.png" alt="PHConvert" />
 
@@ -31,25 +37,34 @@ import TechStackIcon from '../../components/TechStackIcon.astro';
     <div>
       <h4 class="text-lg font-bold">PHP</h4>
       <p class="text-lg">
-        Client had already purchased a hosting plan with PHP support so I decided to use it for the backend.
+        Client had already purchased a hosting plan with PHP support so I
+        decided to use it for the backend.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">JavaScript</h4>
       <p class="text-lg">
-        JavaScript was used to add some interactivity to the frontend, like showing a loading indicator when the user clicks the submit button and clearing forms.
+        JavaScript was used to add some interactivity to the frontend, like
+        showing a loading indicator when the user clicks the submit button and
+        clearing forms.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">Materialize</h4>
       <p class="text-lg">
-        Materialize was used to make the frontend look good. It allowed me to quickly create a responsive website that looks good on both desktop and mobile, and I was able to focus more on the backend logic.
+        Materialize was used to make the frontend look good. It allowed me to
+        quickly create a responsive website that looks good on both desktop and
+        mobile, and I was able to focus more on the backend logic.
       </p>
     </div>
   </div>
   <hr class="my-4" />
-  <a href="https://ilovebir.com" target="_blank" rel="noopener noreferrer" class="text-lg underline">https://ilovebir.com</a>
+  <a
+    href="https://ilovebir.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-lg underline">https://ilovebir.com</a
+  >
 </BaseLayout>
-

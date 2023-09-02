@@ -1,14 +1,18 @@
 ---
-import { Img } from 'astro-imagetools/components';
-import { format } from 'date-fns';
+import { Img } from "astro-imagetools/components";
+import { format } from "date-fns";
 
 const title = Astro.props.title;
 const description = Astro.props.description;
 const image = Astro.props.image;
 const url = Astro.props.url;
-const date = format(Astro.props.date, 'MMMM yyyy');
+const date = format(Astro.props.date, "MMMM yyyy");
 ---
-<a href={`/projects/${url}`} class="flex flex-col bg-gray-100 shadow-md rounded-md p-4 transition-colors duration-500 hover:bg-gray-300">
+
+<a
+  href={`/projects/${url}`}
+  class="flex flex-col bg-gray-100 shadow-md rounded-md p-4 transition-colors duration-500 hover:bg-gray-300"
+>
   <Img src={image} alt={title} position="top" width={400} height={300} />
   <div>
     <h1 class="text-2xl font-bold mb-2" transition:name={title}>{title}</h1>

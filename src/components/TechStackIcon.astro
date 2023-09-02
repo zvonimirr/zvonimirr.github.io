@@ -1,12 +1,12 @@
 ---
-import { cn } from '../utils/cn';
-import { Icon } from 'astro-icon';
+import { cn } from "../utils/cn";
+import { Icon } from "astro-icon";
 
 const title = Astro.props.title;
 const name = Astro.props.name;
-const _class = cn(Astro.props.class, 'w-16 h-16');
+const _class = cn(Astro.props.class, "w-16 h-16");
 ---
+
 <abbr title={title}>
   <Icon name={name} class={_class} />
 </abbr>
-

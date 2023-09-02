@@ -1,10 +1,13 @@
 ---
-import { Img } from 'astro-imagetools/components';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import TechStackIcon from '../../components/TechStackIcon.astro';
+import { Img } from "astro-imagetools/components";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TechStackIcon from "../../components/TechStackIcon.astro";
 ---
+
 <BaseLayout title="IndieScreening" mainClass="flex-grow">
-  <h1 class="text-4xl font-bold" transition:name="IndieScreening">IndieScreening</h1>
+  <h1 class="text-4xl font-bold" transition:name="IndieScreening">
+    IndieScreening
+  </h1>
   <h2 class="text-2xl">A platform for indie filmmakers</h2>
 
   <h3 class="text-3xl font-bold mt-4">Tech Stack</h3>
@@ -17,10 +20,13 @@ import TechStackIcon from '../../components/TechStackIcon.astro';
 
   <h3 class="text-3xl font-bold mt-4">Project Goal</h3>
   <p class="text-lg">
-    The client needed a highly modular website that allowed filmmakers to post their own movies so that screening organizers can buy screenings of the movies that people could watch.
+    The client needed a highly modular website that allowed filmmakers to post
+    their own movies so that screening organizers can buy screenings of the
+    movies that people could watch.
   </p>
   <p class="text-lg">
-    The site needed to be able to handle payments, and allow the client to manage the movies and screenings.
+    The site needed to be able to handle payments, and allow the client to
+    manage the movies and screenings.
   </p>
   <Img src="/images/projects/indiescreening.png" alt="IndieScreening" />
 
@@ -29,40 +35,53 @@ import TechStackIcon from '../../components/TechStackIcon.astro';
     <div>
       <h4 class="text-lg font-bold">Drupal 9</h4>
       <p class="text-lg">
-        Drupal 9 was chosen as the CMS for this project because of its flexibility and ease of use. It allowed me to create a highly modular site that was easy to manage and maintain. The site features a custom theme built with Bootstrap 5, jQuery and TypeScript.
+        Drupal 9 was chosen as the CMS for this project because of its
+        flexibility and ease of use. It allowed me to create a highly modular
+        site that was easy to manage and maintain. The site features a custom
+        theme built with Bootstrap 5, jQuery and TypeScript.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">Bootstrap 5</h4>
       <p class="text-lg">
-        Bootstrap 5 was used to create a responsive, mobile-first theme that was easy to maintain and extend. A proven framework like Bootstrap 5 allowed me to focus on the functionality of the site, rather than the design.
+        Bootstrap 5 was used to create a responsive, mobile-first theme that was
+        easy to maintain and extend. A proven framework like Bootstrap 5 allowed
+        me to focus on the functionality of the site, rather than the design.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">TypeScript</h4>
       <p class="text-lg">
-        TypeScript was used to create custom dashboard functionality for the site. It allowed me to create a more robust and maintainable codebase.
+        TypeScript was used to create custom dashboard functionality for the
+        site. It allowed me to create a more robust and maintainable codebase.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">Twig</h4>
       <p class="text-lg">
-        Twig was used to create custom templates for the site. It is Drupal's templating engine and it allowed me to create a highly modular theme, which was a requirement for this project.
+        Twig was used to create custom templates for the site. It is Drupal's
+        templating engine and it allowed me to create a highly modular theme,
+        which was a requirement for this project.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">PayPal</h4>
       <p class="text-lg">
-        Payments on the site are handled by PayPal. It was chosen because of its ease of use and popularity, and a custom module was created to handle the payment process.
+        Payments on the site are handled by PayPal. It was chosen because of its
+        ease of use and popularity, and a custom module was created to handle
+        the payment process.
       </p>
     </div>
-
   </div>
   <hr class="my-4" />
-  <a href="https://indiescreening.com" target="_blank" rel="noopener noreferrer" class="text-lg underline">https://indiescreening.com</a>
+  <a
+    href="https://indiescreening.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-lg underline">https://indiescreening.com</a
+  >
 </BaseLayout>
-

@@ -1,11 +1,17 @@
 ---
-import { Img } from 'astro-imagetools/components';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import TechStackIcon from '../../components/TechStackIcon.astro';
+import { Img } from "astro-imagetools/components";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TechStackIcon from "../../components/TechStackIcon.astro";
 ---
+
 <BaseLayout title="Raise Your Division" mainClass="flex-grow">
-  <h1 class="text-4xl font-bold" transition:name="Raise Your Division">Raise Your Division</h1>
-  <h2 class="text-2xl">A League of Legends boosting service with a custom built calculator and order form.</h2>
+  <h1 class="text-4xl font-bold" transition:name="Raise Your Division">
+    Raise Your Division
+  </h1>
+  <h2 class="text-2xl">
+    A League of Legends boosting service with a custom built calculator and
+    order form.
+  </h2>
 
   <h3 class="text-3xl font-bold mt-4">Tech Stack</h3>
   <div class="flex flex-row gap-2">
@@ -16,40 +22,56 @@ import TechStackIcon from '../../components/TechStackIcon.astro';
 
   <h3 class="text-3xl font-bold mt-4">Project Goal</h3>
   <p class="text-lg">
-    The client wanted a website where users can calculate the price of a boost and order it.
+    The client wanted a website where users can calculate the price of a boost
+    and order it.
   </p>
   <p class="text-lg">
-    He also wanted to be able to add new services and change the prices himself, without having to contact me, so I decided to build a custom tool for him that would allow him to alter the prices that were stored in JSON.
+    He also wanted to be able to add new services and change the prices himself,
+    without having to contact me, so I decided to build a custom tool for him
+    that would allow him to alter the prices that were stored in JSON.
   </p>
-  <Img src="/images/projects/raise-your-division.png" alt="Raise Your Division" />
+  <Img
+    src="/images/projects/raise-your-division.png"
+    alt="Raise Your Division"
+  />
 
   <h3 class="text-3xl font-bold mt-4">Solution</h3>
   <div class="flex flex-col gap-2">
     <div>
       <h4 class="text-lg font-bold">React</h4>
       <p class="text-lg">
-        Since the app didn't require any server logic nor multiple pages, I decided to go with React. 
+        Since the app didn't require any server logic nor multiple pages, I
+        decided to go with React.
       </p>
       <p class="text-lg">
-        It proved to be a good choice, since the app required multiple forms that looked similar, but had different logic behind them.
+        It proved to be a good choice, since the app required multiple forms
+        that looked similar, but had different logic behind them.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">Ant Design</h4>
       <p class="text-lg">
-      As the client didn't have any specific design requirements, I decided to go with Ant Design, since it allowed me to focus less on the design and more on the functionality.
+        As the client didn't have any specific design requirements, I decided to
+        go with Ant Design, since it allowed me to focus less on the design and
+        more on the functionality.
       </p>
     </div>
 
     <div>
       <h4 class="text-lg font-bold">PayPal JS SDK</h4>
       <p class="text-lg">
-        The client wanted to be able to accept payments through PayPal, so I decided to use their JS SDK. It was recommended by PayPal themselves and it was easy to integrate.
+        The client wanted to be able to accept payments through PayPal, so I
+        decided to use their JS SDK. It was recommended by PayPal themselves and
+        it was easy to integrate.
       </p>
     </div>
   </div>
   <hr class="my-4" />
-  <a href="https://raiseyourdivision.com" target="_blank" rel="noopener noreferrer" class="text-lg underline">https://raiseyourdivision.com</a>
+  <a
+    href="https://raiseyourdivision.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-lg underline">https://raiseyourdivision.com</a
+  >
 </BaseLayout>
-

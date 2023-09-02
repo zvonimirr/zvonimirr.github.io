@@ -1,9 +1,18 @@
 ---
-import Navigation from './Navigation.astro';
+import Navigation from "./Navigation.astro";
 ---
-<header class="flex flex-row bg-white items-center justify-between shadow-lg py-1 px-3" transition:name="header">
+
+<header
+  class="flex flex-row bg-white items-center justify-between shadow-lg py-1 px-3"
+  transition:name="header"
+>
   <a href="/">
-    <img src="/images/main.jpeg" alt="Main image" width="64" class="rounded-full grayscale transition-[filter] duration-500 ease-in-out hover:grayscale-0" />
+    <img
+      src="/images/main.jpeg"
+      alt="Main image"
+      width="64"
+      class="rounded-full grayscale transition-[filter] duration-500 ease-in-out hover:grayscale-0"
+    />
   </a>
   <Navigation />
 </header>
