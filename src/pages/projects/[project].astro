@@ -84,14 +84,18 @@ if (!project) {
 
   <hr class="my-4" />
 
-  <a
-    href={project.projectUrl}
-    rel="noopener noreferrer"
-    target="_blank"
-    class="text-lg underline"
-  >
-    {project.projectUrl}
-  </a>
+  {
+    project.projectUrl && (
+      <a
+        href={project.projectUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+        class="text-lg underline"
+      >
+        {project.projectUrl}
+      </a>
+    )
+  }
 </BaseLayout>
 
 <style>

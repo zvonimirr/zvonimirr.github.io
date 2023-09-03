@@ -12,12 +12,90 @@ type Project = {
   goal: string;
   image: string;
   url: string;
-  projectUrl: string;
   date: Date;
   techStack: TechStack[];
+  projectUrl?: string;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Miami Street Photography Contest 2017",
+    description:
+      "A website for a street photography contest in Miami, Florida.",
+    goal: "The website was already created for the contest, but after upgrading to PHP 7, the website stopped working.\nI was tasked with fixing the website and adding a few new features.",
+    image: "/images/projects/mspf.png",
+    url: "mspf",
+    projectUrl: "https://miamistreetphotographyfestival.org",
+    date: new Date("2017-06-01"),
+    techStack: [
+      {
+        id: "php",
+        icon: "logos:php",
+        name: "PHP",
+        description:
+          "The website was already created in PHP, so I decided to stick with it.\nI had to upgrade the code to PHP 7, as the website was using deprecated functions and was throwing multiple errors everywhere.\nI also also added a brand new admin dashboard allowing the client and the judges to easily vote.",
+      },
+      {
+        id: "materialize",
+        icon: "logos:materializecss",
+        name: "Materialize",
+        description:
+          "Materialize was used for the admin dashboard, as it was easy to use and provided a clean look.\nIt allowed me to quickly create a responsive UI, which was important as the dashboard was used by people on their phones.",
+      },
+      {
+        id: "mysql",
+        icon: "logos:mysql-icon",
+        name: "MySQL",
+        description:
+          "Although the website was already using MySQL, I had to upgrade the code to use the latest version of the MySQLi extension, as the old one was deprecated.\nI also optimized the database by dropping some unnecessary tables, as well as storing the password as a hash instead of plaintext like it was before.",
+      },
+      {
+        id: "js",
+        icon: "logos:javascript",
+        name: "JavaScript",
+        description:
+          "When I started working on the website, it barely had any JavaScript.\nI decided to add some interactivity to the website, such as a countdown timer and a gallery.",
+      },
+      {
+        id: "paypal",
+        icon: "logos:paypal",
+        name: "PayPal",
+        description:
+          "The previous developer was using a custom payment gateway, which was not working anymore.\nI decided to use PayPal as the payment gateway, as it was the client's preferred payment gateway anyway.",
+      },
+    ],
+  },
+  {
+    title: "Dynamic Swipeable Cards",
+    description: "A testimonial website with multi-lingual swipeable cards.",
+    goal: "The client had a website with testimonials, but they were static and not swipeable.\nShe wanted to have swipeable cards, which would also be multi-lingual, where the language could be selected.",
+    image: "/images/projects/stacked-cards.png",
+    url: "dynamic-swipeable-cards",
+    date: new Date("2020-09-01"),
+    techStack: [
+      {
+        id: "react",
+        icon: "logos:react",
+        name: "React",
+        description:
+          "React was used for the frontend, since the cards all looked the same, but had different content.\nIt allowed me to create a reusable component for the cards, which could be used for all the cards.",
+      },
+      {
+        id: "semantic",
+        icon: "logos:semantic-ui",
+        name: "Semantic UI",
+        description:
+          "Semantic UI was chosen for its clean look and already existing React components.\nThis allowed for fast development and a clean UI saving time for me and the client.",
+      },
+      {
+        id: "php",
+        icon: "logos:php",
+        name: "PHP",
+        description:
+          "PHP was used for the backend, since the client already had a PHP website.\nThe cards were kept in a CSV file and separated into Dutch & French.",
+      },
+    ],
+  },
   {
     title: "Raise Your Division",
     description:
@@ -180,7 +258,7 @@ export const projects: Project[] = [
         name: "TypeScript",
         icon: "logos:typescript-icon",
         description:
-          "A natural choice for any Next.js project, TypeScript was used to ensure type safety and allow easy refactoring.",
+          "A natural choice for any Next.js project, TypeScript was used to ensure type safety and allow easy refactoring.\nFor the styling, I used Styled Components, which allowed me keep both the style and the logic in one file for easier code management and separation.",
       },
       {
         id: "redis",
