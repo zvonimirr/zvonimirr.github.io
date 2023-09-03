@@ -1,4 +1,4 @@
-type TechStack = {
+export type TechStack = {
   id: string;
   icon: string;
   name: string;
@@ -6,7 +6,7 @@ type TechStack = {
   class?: string;
 };
 
-type Project = {
+export type Project = {
   title: string;
   description: string;
   goal: string;
