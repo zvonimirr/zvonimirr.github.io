@@ -19,6 +19,38 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    title: "SEO Scraper Tool",
+    description:
+      "A tool to scrape search results from multiple search engines and export them to a CSV file, sorting them by relevance.",
+    goal: "The client had a list of keywords and wanted to know where his website ranked for each keyword.\nHe also wanted to know where his competitors ranked for each keyword.\nSince he had a lot of keywords, he wanted to automate the process.\nThe tool was written in vanilla JS before and the client had to manually run the Python script to process the files.\nI helped him optimize his workflow by creating a modern app which handled everything he needed.",
+    image: "/images/projects/seo-scraper.png",
+    url: "seo-scraper",
+    date: new Date("2022-04-01"),
+    techStack: [
+      {
+        id: "react",
+        icon: "logos:react",
+        name: "React",
+        description:
+          "React was used for the UI.\nThe client was happy with the UI of the previous version, so I decided to keep it the same.\nI also decided to use React because of its reusability, which allowed me to create a reusable component for the search results.",
+      },
+      {
+        id: "nodejs",
+        icon: "logos:nodejs-icon",
+        name: "Node.js",
+        description:
+          "Node was used for the backend. I decided to use Node because the previous version didn't have an API and used a script that was written in Python which the client had to manually run to process the files.\nI decided to automate the process by creating a Node server which would process the files automatically.\nUsing Node also allowed me to use the same language on both frontend and the backend.",
+      },
+      {
+        id: "typescript",
+        icon: "logos:typescript-icon",
+        name: "TypeScript",
+        description:
+          "The previous version was written in vanilla JS, which made it hard to maintain.\nI decided to use TypeScript, taking advantage of its type safety and allowing me to easily refactor the code if necessary.",
+      },
+    ],
+  },
+  {
     title: "Miami Street Photography Contest 2017",
     description:
       "A website for a street photography contest in Miami, Florida.",
