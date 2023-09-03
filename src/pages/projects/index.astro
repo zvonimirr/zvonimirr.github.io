@@ -108,7 +108,9 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
 
         // Show only the projects that have the selected tech
         projects.forEach((project) => {
-          const techs = (project as HTMLElement).dataset.techStack;
+          const techs = (
+            (project as HTMLElement).dataset.techStack ?? ""
+          ).split(",");
 
           for (const tech of technologies) {
             if (techs?.includes(tech)) {
