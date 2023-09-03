@@ -1,17 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import { format } from "date-fns";
+import type { TechStack } from "../utils/projects";
 
 const title = Astro.props.title;
 const description = Astro.props.description;
 const image = Astro.props.image;
 const url = Astro.props.url;
 const date = format(Astro.props.date, "MMMM yyyy");
+const techStack = Astro.props.techStack
+  .map((tech: TechStack) => tech.id)
+  .join(",");
 ---
 
 <a
   href={`/projects/${url}`}
   class="flex flex-col bg-gray-100 shadow-md rounded-md p-4 transition-colors duration-500 hover:bg-gray-300"
+  data-tech-stack={techStack}
 >
   <Image
     src={image}
