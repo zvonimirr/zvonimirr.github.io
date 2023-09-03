@@ -95,6 +95,13 @@ export const projects: Project[] = [
           "Node.js was implemented for the backend infrastructure. The rationale behind this choice stemmed from the absence of an API in the previous version, which relied on a Python script requiring manual execution for file processing. In an effort to automate this process, I introduced a Node.js server that handled file processing automatically. Additionally, this decision ensured language consistency between the frontend and backend, promoting code uniformity.",
       },
       {
+        id: "mysql",
+        icon: "logos:mysql-icon",
+        name: "MySQL",
+        description:
+          "The decision to opt for MySQL the database solution was made with careful consideration, taking into account its extensive popularity and its ability to effectively store and manage reusable crawling templates. This choice aligned seamlessly with the project's requirements, ensuring robust data storage and retrieval capabilities while enhancing scalability and maintainability.",
+      },
+      {
         id: "typescript",
         icon: "logos:typescript-icon",
         name: "TypeScript",
@@ -313,6 +320,13 @@ export const projects: Project[] = [
         description:
           "Twig was the natural choice for crafting the website's theme, given its status as the default templating engine for Drupal. This decision facilitated the creation of a theme characterized by its cleanliness, ease of maintenance, and exceptional modularity, aligning seamlessly with one of the project's core requirements.",
         class: "text-green-500",
+      },
+      {
+        id: "mysql",
+        name: "MySQL",
+        icon: "logos:mysql-icon",
+        description:
+          "MySQL was strategically chosen as the optimal database solution for this project, owing to its widespread acclaim and remarkable proficiency in the management and storage of data. This selection seamlessly harmonized with the project's prerequisites, guaranteeing a resilient infrastructure for data storage and retrieval, thereby fostering scalability and maintainability. It is worth noting that this decision is further bolstered by Drupal's strong compatibility and support for MySQL, reinforcing the synergy between our chosen technology stack and the website's platform.",
       },
       {
         id: "paypal",
