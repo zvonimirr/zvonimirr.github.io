@@ -21,8 +21,8 @@ export const projects: Project[] = [
   {
     title: "Quantum - Job Application & Dashboard",
     description:
-      "A job application website with a dashboard for the client to manage the applications.",
-    goal: "The client needed a website where users can apply for a job, as well as a dashboard where he can manage the applications.\nThe client picked a template from ThemeForest, but it needed to be changed to match the branding colors of the company.",
+      "A web-based employment application platform featuring a user-friendly dashboard for clients to efficiently oversee and manage submitted job applications.",
+    goal: "The client sought a website solution enabling job seekers to submit applications seamlessly, complemented by an integrated dashboard for streamlined application management. The initial template selection from ThemeForest was deemed suitable, but adjustments were required to align with the company's branding palette.",
     image: "/images/projects/quantum.png",
     url: "quantum",
     date: new Date("2023-08-01"),
@@ -32,50 +32,50 @@ export const projects: Project[] = [
         icon: "logos:react",
         name: "React",
         description:
-          "React was used for the frontend, since the template was already using it.\nIt allowed me to easily change the colors of the template and create a flexible multi-step form with ease.\nClerk was also used to allow social login which would prefill some data for the user.",
+          "React was employed for the frontend development due to its compatibility with the preexisting template, facilitating efficient color customization and the seamless creation of a versatile multi-step form. Additionally, Clerk was integrated to enable social login functionality, enhancing user convenience by automatically populating certain user data.",
       },
       {
         id: "nextjs",
         icon: "logos:nextjs-icon",
         name: "Next.js",
         description:
-          "Next.js was used for the dashboard.\nThe template the client picked was using React, but I decided to use Next.js instead and leverage its server-side rendering capabilities to easily load job applications from the database and implement authentication in a secure way using NextAuth.js.",
+          "Next.js was employed for the development of the dashboard. While the client's chosen template was originally built with React, I opted to utilize Next.js, harnessing its server-side rendering capabilities. This choice facilitated efficient retrieval of job applications from the database and the implementation of secure authentication via NextAuth.js.",
       },
       {
         id: "bootstrap",
         icon: "logos:bootstrap",
         name: "Bootstrap",
         description:
-          "Both templates were using Bootstrap, so there was no need to change it.\nChanging the colors was easy, as I only had to change the variables in the SCSS files.",
+          "Both templates were already utilizing Bootstrap, obviating the necessity for alterations in this regard. The process of color customization proved straightforward, as it entailed the modification of variables within the SCSS files.",
       },
       {
         id: "scss",
         icon: "vscode-icons:file-type-scss",
         name: "SCSS",
         description:
-          "Although the templates were already mostly styled, there were some changes that needed to be made to provide the best user experience.\nAdding some animations proved to be a great decision, as it made the website feel more modern and engaging.",
+          "While the templates possessed a pre-existing style foundation, certain adjustments were deemed imperative to enhance the overall user experience. The incorporation of animations emerged as a particularly beneficial decision, imbuing the website with a contemporary and engaging ambiance.",
       },
       {
         id: "nodejs",
         icon: "logos:nodejs-icon",
         name: "Node.js",
         description:
-          "In the spirit of using the same language on both frontend and backend, I decided to use Node.js for the backend.\nIt allowed me to easily create an API for uploading files and inserting and fetching data from the database.",
+          "To maintain consistency in the technology stack between the frontend and backend, I opted for Node.js for the backend development. This choice facilitated the seamless creation of an API for tasks such as file uploads and database interaction, ensuring a harmonious and efficient system.",
       },
       {
         id: "mongodb",
         icon: "vscode-icons:file-type-mongo",
         name: "MongoDB",
         description:
-          "MongoDB was used for the database, as the form had a lot of dynamic fields and the client wanted to be able to easily add new fields.\nUsing MongoDB allowed me to keep the data in a single collection and not worry about data that had dynamic length (ex. previous work experience).",
+          "MongoDB was selected as the database solution, primarily due to the form's extensive use of dynamic fields and the client's requirement for the effortless addition of new fields. Leveraging MongoDB enabled the consolidation of data within a single collection, alleviating concerns related to dynamic data length, such as previous work experience entries.",
       },
     ],
   },
   {
     title: "SEO Scraper Tool",
     description:
-      "A tool to scrape search results from multiple search engines and export them to a CSV file, sorting them by relevance.",
-    goal: "The client had a list of keywords and wanted to know where his website ranked for each keyword.\nHe also wanted to know where his competitors ranked for each keyword.\nSince he had a lot of keywords, he wanted to automate the process.\nThe tool was written in vanilla JS before and the client had to manually run the Python script to process the files.\nI helped him optimize his workflow by creating a modern app which handled everything he needed.",
+      "An application designed for the extraction of search results from various search engines and subsequent exportation to a CSV file, featuring a sorting mechanism based on relevance.",
+    goal: "The client possessed a list of keywords and expressed the need to determine the ranking of their website for each keyword, as well as the rankings of their competitors. Given the large volume of keywords, the client sought automation for this process. Initially, a Python script was used for this purpose, requiring manual execution. I improved the workflow by developing a contemporary application that automated the entire process, streamlining all necessary tasks.",
     image: "/images/projects/seo-scraper.png",
     url: "seo-scraper",
     date: new Date("2022-04-01"),
@@ -85,29 +85,29 @@ export const projects: Project[] = [
         icon: "logos:react",
         name: "React",
         description:
-          "React was used for the UI.\nThe client was happy with the UI of the previous version, so I decided to keep it the same.\nI also decided to use React because of its reusability, which allowed me to create a reusable component for the search results.",
+          "React was employed for the user interface (UI) development. In keeping with the client's satisfaction with the UI from the previous iteration, I retained its design. Additionally, the choice of React was motivated by its inherent reusability, which facilitated the creation of a component for the search results that could be easily reused throughout the application.",
       },
       {
         id: "nodejs",
         icon: "logos:nodejs-icon",
         name: "Node.js",
         description:
-          "Node was used for the backend. I decided to use Node because the previous version didn't have an API and used a script that was written in Python which the client had to manually run to process the files.\nI decided to automate the process by creating a Node server which would process the files automatically.\nUsing Node also allowed me to use the same language on both frontend and the backend.",
+          "Node.js was implemented for the backend infrastructure. The rationale behind this choice stemmed from the absence of an API in the previous version, which relied on a Python script requiring manual execution for file processing. In an effort to automate this process, I introduced a Node.js server that handled file processing automatically. Additionally, this decision ensured language consistency between the frontend and backend, promoting code uniformity.",
       },
       {
         id: "typescript",
         icon: "logos:typescript-icon",
         name: "TypeScript",
         description:
-          "The previous version was written in vanilla JS, which made it hard to maintain.\nI decided to use TypeScript, taking advantage of its type safety and allowing me to easily refactor the code if necessary.",
+          "The prior iteration was constructed with vanilla JavaScript, presenting challenges in terms of maintainability. To address this, I opted for TypeScript, leveraging its robust type safety features. This choice not only improved code maintainability but also provided the flexibility to undertake refactoring efforts with ease when required.",
       },
     ],
   },
   {
     title: "Miami Street Photography Contest 2017",
     description:
-      "A website for a street photography contest in Miami, Florida.",
-    goal: "The website was already created for the contest, but after upgrading to PHP 7, the website stopped working.\nI was tasked with fixing the website and adding a few new features.",
+      "A web platform dedicated to facilitating a street photography contest based in Miami, Florida.",
+    goal: "The website had been previously established to support the contest; however, following an upgrade to PHP 7, it encountered functionality issues. My assignment entailed resolving these issues, as well as implementing additional features as per the client's requirements.",
     image: "/images/projects/mspf.png",
     url: "mspf",
     projectUrl: "https://miamistreetphotographyfestival.org",
@@ -118,42 +118,43 @@ export const projects: Project[] = [
         icon: "logos:php",
         name: "PHP",
         description:
-          "The website was already created in PHP, so I decided to stick with it.\nI had to upgrade the code to PHP 7, as the website was using deprecated functions and was throwing multiple errors everywhere.\nI also also added a brand new admin dashboard allowing the client and the judges to easily vote.",
+          "Given the website's existing PHP foundation, I elected to maintain continuity by retaining PHP as the development language. To address the prevalent issues stemming from deprecated functions and widespread errors due to the upgrade to PHP 7, I performed a comprehensive code revision. In addition, I introduced a newly designed admin dashboard, facilitating effortless voting processes for both the client and judges.",
       },
       {
         id: "materialize",
         icon: "logos:materializecss",
         name: "Materialize",
         description:
-          "Materialize was used for the admin dashboard, as it was easy to use and provided a clean look.\nIt allowed me to quickly create a responsive UI, which was important as the dashboard was used by people on their phones.",
+          "Materialize was adopted for the admin dashboard's frontend interface due to its user-friendly nature and capacity to deliver a visually streamlined appearance. This choice expedited the creation of a responsive user interface, a critical consideration given that the dashboard was intended for use by individuals on mobile devices.",
       },
       {
         id: "mysql",
         icon: "logos:mysql-icon",
         name: "MySQL",
         description:
-          "Although the website was already using MySQL, I had to upgrade the code to use the latest version of the MySQLi extension, as the old one was deprecated.\nI also optimized the database by dropping some unnecessary tables, as well as storing the password as a hash instead of plaintext like it was before.",
+          "While the website had previously employed MySQL, a code upgrade was necessary to incorporate the latest version of the MySQLi extension, as the prior version had become deprecated. Additionally, I conducted database optimization measures by eliminating extraneous tables and enhancing security by transitioning from plaintext password storage to the more secure practice of password hashing.",
       },
       {
         id: "js",
         icon: "logos:javascript",
         name: "JavaScript",
         description:
-          "When I started working on the website, it barely had any JavaScript.\nI decided to add some interactivity to the website, such as a countdown timer and a gallery.",
+          "At the outset of my engagement with the website, its JavaScript functionality was minimal. I embarked on enhancing the user experience by introducing elements of interactivity, including the incorporation of a countdown timer and the implementation of a gallery feature.",
       },
       {
         id: "paypal",
         icon: "logos:paypal",
         name: "PayPal",
         description:
-          "The previous developer was using a custom payment gateway, which was not working anymore.\nI decided to use PayPal as the payment gateway, as it was the client's preferred payment gateway anyway.",
+          "The preceding developer had implemented a proprietary payment gateway that had ceased functioning. In light of the client's preference and the need for a reliable solution, I opted to integrate PayPal as the chosen payment gateway for the website.",
       },
     ],
   },
   {
     title: "Dynamic Swipeable Cards",
-    description: "A testimonial website with multi-lingual swipeable cards.",
-    goal: "The client had a website with testimonials, but they were static and not swipeable.\nShe wanted to have swipeable cards, which would also be multi-lingual, where the language could be selected.",
+    description:
+      "A multilingual testimonial website featuring a user-friendly interface with swipeable card components.",
+    goal: "The client had an existing testimonial website with static content that lacked interactivity. Her request was to implement swipeable card elements that supported multiple languages, with user-selectable language options.",
     image: "/images/projects/stacked-cards.png",
     url: "dynamic-swipeable-cards",
     date: new Date("2020-09-01"),
@@ -163,29 +164,29 @@ export const projects: Project[] = [
         icon: "logos:react",
         name: "React",
         description:
-          "React was used for the frontend, since the cards all looked the same, but had different content.\nIt allowed me to create a reusable component for the cards, which could be used for all the cards.",
+          "React was chosen for the frontend development due to the consistent visual design of the cards, despite variations in their content. This choice facilitated the creation of a reusable card component, streamlining the implementation of all card instances.",
       },
       {
         id: "semantic",
         icon: "logos:semantic-ui",
         name: "Semantic UI",
         description:
-          "Semantic UI was chosen for its clean look and already existing React components.\nThis allowed for fast development and a clean UI saving time for me and the client.",
+          "Semantic UI was the selected framework due to its visually appealing and well-structured design, which also featured readily available React components. This expedited the development process, resulting in a clean and efficient user interface, ultimately saving time for both myself and the client.",
       },
       {
         id: "php",
         icon: "logos:php",
         name: "PHP",
         description:
-          "PHP was used for the backend, since the client already had a PHP website.\nThe cards were kept in a CSV file and separated into Dutch & French.",
+          "PHP was employed for backend development in alignment with the client's existing PHP-based website infrastructure. The testimonial cards were stored in a CSV file, categorized into Dutch and French language sections for efficient management.",
       },
     ],
   },
   {
     title: "Raise Your Division",
     description:
-      "A League of Legends boosting calculator which allows users to purchase the boost directly from the website.",
-    goal: "The client wanted to have a website where users can calculate the price of a boost and purchase it directly from the website.",
+      "An online League of Legends boosting calculator that empowers users to estimate and facilitate boost purchases directly through the website.",
+    goal: "The client's vision was to create a robust online platform that catered to the vibrant League of Legends gaming community. This envisioned website would serve as a multifaceted tool, allowing users to not only calculate the precise price of boosting services tailored to their specific needs but also seamlessly proceed with secure and convenient transactions right on the platform.",
     image: "/images/projects/raise-your-division.png",
     url: "raise-your-division",
     projectUrl: "https://raiseyourdivision.com",
@@ -196,29 +197,29 @@ export const projects: Project[] = [
         icon: "logos:react",
         name: "React",
         description:
-          "Since the app didn't require any server-side logic, I decided to use React for the frontend.\nIt proved to be a great decision as the app required multiple forms with similar components but different logic.",
+          "Given the absence of a need for server-side logic, I opted for React to develop the frontend. This choice proved highly advantageous, particularly because the application entailed the creation of multiple forms, each sharing common components but demanding distinct logic.",
       },
       {
         id: "antd",
         icon: "simple-icons:antdesign",
         name: "Ant Design",
         description:
-          "As the client didn't provide any design, nor did he have any specific requirements, I decided to use Ant Design for the UI.\nIt allowed me to focus less on the design itself and more on the functionality.",
+          "In the absence of specific design guidelines or client-provided requirements, I made the deliberate choice to employ Ant Design for the user interface. This strategic decision enabled me to streamline the development process, shifting the emphasis away from design intricacies and towards the implementation of robust functionality.",
       },
       {
         id: "paypal",
         icon: "logos:paypal",
         name: "PayPal JS SDK",
         description:
-          "The client wanted to use PayPal as the payment gateway, so I used their JS SDK to integrate it with the app.\nIt was recommended by PayPal themselves, and it was easy to integrate.",
+          "The client expressed a preference for PayPal as the payment gateway, leading me to integrate it using their JavaScript SDK. This choice was endorsed by PayPal themselves, reflecting its reliability and ease of integration, ensuring a seamless payment experience within the application.",
       },
     ],
   },
   {
     title: "WhatsApp Link Generator",
     description:
-      "A tool to generate WhatsApp links with custom messages and phone numbers.",
-    goal: "The client wanted to have a tool where users can generate WhatsApp links with custom messages and phone numbers, which they can then share with their friends.",
+      "A utility designed for the generation of WhatsApp links featuring personalized messages and specified phone numbers.",
+    goal: "The client's vision centered around the creation of a user-friendly tool that would empower individuals to generate WhatsApp links embedded with personalized messages and designated phone numbers. This tool would facilitate easy sharing of these custom links among friends and contacts.",
     image: "/images/projects/wa-link-generator.png",
     url: "wa-link-generator",
     projectUrl: "https://wa-tip.com",
@@ -229,14 +230,14 @@ export const projects: Project[] = [
         name: "WordPress",
         icon: "mdi:wordpress",
         description:
-          "The client already had a WordPress website, so I decided to use WordPress for the tool as well.\nI created a custom plugin for the tool, which allowed me to easily integrate it with the website.",
+          "Given the client's existing WordPress website, I made the strategic decision to align the tool with the same platform. To achieve this, I developed a custom WordPress plugin tailored specifically for the tool's functionality. This approach streamlined the integration process, seamlessly incorporating the tool within the website's ecosystem.",
       },
       {
         id: "whatsapp",
         name: "WhatsApp API",
         icon: "dashicons:whatsapp",
         description:
-          "WhatsApp has an API that allows you to send messages to a specific number.\nI used this API to generate the links, along with a QR code that users can scan to send the message.",
+          "To facilitate the generation of WhatsApp links and enhance user interaction, I harnessed the WhatsApp API, which enables the transmission of messages to designated phone numbers. By leveraging this API, I not only created the links but also generated corresponding QR codes. These QR codes offered users a convenient means to initiate message sending by simply scanning the code.",
         class: "text-green-500",
       },
     ],
@@ -244,8 +245,8 @@ export const projects: Project[] = [
   {
     title: "PHConvert",
     description:
-      "A tool to convert Excel templates to a file format used by the Filipino government for tax purposes",
-    goal: "The client had created Excel templates to help companies and individuals to keep track of their sales, purchases and inventory, however, the government required them to be in a specific file format.\nSince no tool existed I was tasked with creating one.",
+      "An application designed to facilitate the conversion of Excel templates into a file format compliant with the requirements of the Filipino government for tax-related purposes.",
+    goal: "The client had previously developed Excel templates aimed at aiding businesses and individuals in monitoring their sales, purchases, and inventory. However, to align with government regulations, these records needed to be converted into a specific file format mandated by the Filipino government. Given the absence of an existing solution, I was entrusted with the responsibility of creating a custom tool to bridge this crucial compliance gap.",
     image: "/images/projects/phconvert.png",
     url: "phconvert",
     projectUrl: "https://ilovebir.com",
@@ -256,28 +257,29 @@ export const projects: Project[] = [
         name: "PHP",
         icon: "logos:php",
         description:
-          "The client wanted the tool to be a web app, so it could be used easily by anyone.\nSince the client already had bought hosting with PHP support, I decided to use PHP for the backend.\nSince the app only had few pages, I decided against using a framework.",
+          "In response to the client's desire for a user-friendly and accessible tool, I opted to develop it as a web application. Leveraging the client's existing hosting infrastructure, which provided support for PHP, I selected PHP as the backend technology. Given the tool's relatively simple structure with only a few pages, I made the decision not to employ a framework, ensuring a streamlined and efficient development process.",
       },
       {
         id: "js",
         name: "JavaScript",
         icon: "logos:javascript",
         description:
-          "JavaScript was used to provide some interactivity to the app, such as showing a loading indicator when the file is being converted and resetting the form after the file is converted.",
+          "JavaScript played a pivotal role in enhancing the user experience of the application. It was employed to introduce interactive elements, including the display of a loading indicator to signify ongoing file conversion processes. Additionally, JavaScript facilitated the seamless resetting of the form after successful file conversion, further optimizing the overall usability of the tool.",
       },
       {
         id: "materialize",
         name: "Materialize",
         icon: "logos:materializecss",
         description:
-          "Materialize was used for the UI, as it was easy to use and provided a clean look.\nIt allowed me to quickly create a responsive UI, which was important as the app was used by people on their phones.\nBy using Materialize I focused less on CSS and more on the backend logic.",
+          "Materialize was the UI framework of choice due to its user-friendly nature and capacity to deliver a clean and aesthetically pleasing design. This selection expedited the development process by facilitating the creation of a responsive user interface, a pivotal element given the application's need to cater to users across various devices and screen sizes.",
       },
     ],
   },
   {
     title: "IndieScreening",
-    description: "A platform for indie filmmakers to showcase their work.",
-    goal: "The client needed a high-quality website to showcase his work and allow users to purchase his films, as well as allow other filmmakers to showcase their work as well.\nThe website needed to handle payments, as well as have multiple user roles.",
+    description:
+      "A dedicated platform designed to provide independent filmmakers with a stage to exhibit and share their creative works.",
+    goal: "The client's imperative was the creation of a top-tier website that would serve as both a showcase for their own cinematic endeavors and a collaborative platform for fellow filmmakers. The website's multifaceted functionality encompassed not only the exhibition of the client's work and enabling user purchases but also providing a space for other filmmakers to spotlight their creations.\nKey functionalities included robust payment processing capabilities to facilitate film sales and the incorporation of a multi-role user system to accommodate various user categories, ensuring a seamless and inclusive platform experience for both filmmakers and film enthusiasts alike.",
     image: "/images/projects/indiescreening.png",
     url: "indiescreening",
     projectUrl: "https://indiescreening.com",
@@ -288,28 +290,28 @@ export const projects: Project[] = [
         name: "Drupal 9",
         icon: "logos:drupal-icon",
         description:
-          "Drupal 9 was chosen as the CMS for the website because of its flexibility and the fact that it has a lot of modules that can be used to extend its functionality.\nDrupal Commerce is the main plugin that powers most of the website along with some custom modules to handle edge-cases and specific requirements.",
+          "Drupal 9 emerged as the preferred Content Management System (CMS) for the website, primarily owing to its remarkable flexibility and extensive library of modules capable of augmenting its capabilities. At the core of the website's functionality lies Drupal Commerce, a pivotal plugin that underpins the majority of its features. Additionally, custom modules were thoughtfully developed to address unique scenarios and specific demands, ensuring a tailored and comprehensive solution for the platform.",
       },
       {
         id: "bootstrap",
         name: "Bootstrap",
         icon: "logos:bootstrap",
         description:
-          "Bootstrap was used to create a responsive, mobile-first theme that was easy to maintain and extend.\nA proven framework like Bootstrap allowed me to focus less on the design and more on the functionality.",
+          "Bootstrap was instrumental in crafting a responsive, mobile-first theme for the website, characterized by its ease of maintenance and extensibility. The adoption of a well-established framework such as Bootstrap alleviated the need for extensive design considerations, enabling a shift in focus towards the implementation of robust functionality within the website.",
       },
       {
         id: "ts",
         name: "TypeScript",
         icon: "logos:typescript-icon",
         description:
-          "TypeScript was used in the custom modules to provide type safety and make the code easier to maintain.\nIt also allowed me to use the latest JavaScript features.",
+          "TypeScript was strategically employed within the custom modules to imbue the codebase with a layer of type safety, enhancing maintainability. This decision not only ensured code robustness but also afforded the flexibility to harness the latest JavaScript features, further enhancing the overall quality and future-proofing of the project.",
       },
       {
         id: "twig",
         name: "Twig",
         icon: "file-icons:twig",
         description:
-          "Twig was used to create the theme for the website, as it is the default templating engine for Drupal.\nIt allowed me to create a clean, easy to maintain and highly modular theme which was one of the project requirements.",
+          "Twig was the natural choice for crafting the website's theme, given its status as the default templating engine for Drupal. This decision facilitated the creation of a theme characterized by its cleanliness, ease of maintenance, and exceptional modularity, aligning seamlessly with one of the project's core requirements.",
         class: "text-green-500",
       },
       {
@@ -317,15 +319,15 @@ export const projects: Project[] = [
         name: "PayPal",
         icon: "logos:paypal",
         description:
-          "PayPal was used as the payment gateway for the website, as it was the client's preferred payment gateway.\nIt was easy to integrate with Drupal Commerce and a custom module was written for this purpose.",
+          "PayPal emerged as the preferred payment gateway for the website, in line with the client's preference. Its selection was driven by its seamless integration capabilities with Drupal Commerce. To facilitate this integration, a custom module was meticulously developed, ensuring a smooth and secure payment processing experience for users engaging with the platform.",
       },
     ],
   },
   {
     title: "Order Tracker",
     description:
-      "An order tracker for a business in Instanbul, Turkey - with an admin dashboard for couriers.",
-    goal: "The client needed a website where customers can track their orders, as well as an admin dashboard where couriers can manage their orders.\nThe website needed to be in Turkish and have a clean, easy to use UI.",
+      "A comprehensive order tracking system designed for a business operating in Istanbul, Turkey, featuring an administrative dashboard tailored for efficient courier management.",
+    goal: "The client's project encompassed the development of a user-friendly website to cater to customers seeking order tracking capabilities, alongside an administrative dashboard tailored for efficient order management by couriers. With a target audience in Turkey, the website was designed to be in the Turkish language, and great emphasis was placed on delivering a clean and intuitive user interface to enhance usability.",
     image: "/images/projects/order-tracker.png",
     url: "order-tracker",
     projectUrl: "https://takip.normod.com",
@@ -336,28 +338,28 @@ export const projects: Project[] = [
         name: "Next.js",
         icon: "logos:nextjs-icon",
         description:
-          "The client was looking for a modern, fast website, so I decided to use Next.js for the frontend.\nIt allowed me to create a fast, SEO-friendly website with a great developer experience.",
+          "In pursuit of a contemporary and high-performance website, I made the strategic choice to employ Next.js for the frontend development. This framework provided the ideal foundation for crafting a swift, SEO-optimized website while simultaneously enhancing the developer experience, ensuring that the final product met the client's requirements for modernity and speed.",
       },
       {
         id: "ts",
         name: "TypeScript",
         icon: "logos:typescript-icon",
         description:
-          "A natural choice for any Next.js project, TypeScript was used to ensure type safety and allow easy refactoring.\nFor the styling, I used Styled Components, which allowed me keep both the style and the logic in one file for easier code management and separation.",
+          "Given the inherent advantages of Next.js, TypeScript was a natural and prudent selection to enforce type safety and streamline the refactoring process. To enhance code management and maintain the integration of style and logic, I incorporated Styled Components for styling, facilitating the cohesiveness of both aspects within a single file and ensuring effective code separation.",
       },
       {
         id: "redis",
         name: "Redis",
         icon: "logos:redis",
         description:
-          "Redis was used to cache the data from the Google Sheets API, reducing the number of requests made to the API and improving the performance of the website.",
+          "Redis played a pivotal role in the optimization of the website's performance. By implementing Redis to cache data sourced from the Google Sheets API, the frequency of API requests was significantly reduced. This caching mechanism not only alleviated the strain on external API resources but also led to noticeable improvements in the website's overall responsiveness and speed.",
       },
       {
         id: "firebase",
         name: "Firebase",
         icon: "logos:firebase",
         description:
-          "Firebase was used mainly for authentication, as well as for storing the pictures the couriers took when delivering the orders.\nFirebase is also known for it's generous free tier, which made it a perfect choice for this project.",
+          "Firebase was predominantly harnessed for two key functions within the project. Firstly, it served as a robust authentication solution, ensuring secure user access to the platform. Additionally, Firebase was employed for the storage of images captured by couriers during the order delivery process. The decision to utilize Firebase was further bolstered by its reputation for offering an expansive and accommodating free tier, aligning perfectly with the project's requirements.",
       },
       {
         id: "sheets",
@@ -365,7 +367,7 @@ export const projects: Project[] = [
         icon: "simple-icons:googlesheets",
         class: "text-green-500",
         description:
-          "The client was already using Google Sheets to manage their orders, so I decided to use the Google Sheets API to fetch the data for the website.\nIt allowed me to create a fast, easy to use website without having to migrate the data to a database.",
+          "Building upon the client's existing workflow, I seamlessly integrated the Google Sheets API into the project to fetch order data. This strategic choice not only expedited development but also ensured that the website remained fast and user-friendly. Importantly, it obviated the need for data migration to a traditional database, preserving the client's preferred data management system while achieving the desired functionality.",
       },
     ],
   },

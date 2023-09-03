@@ -23,7 +23,10 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
 <BaseLayout title="Projects" mainClass="flex-grow" transition:persist>
   <h1 class="text-4xl font-bold">List of projects</h1>
   {/* List of tech stack */}
-  <div id="tech-stack-filter-container" class="mt-4 hidden">
+  <div
+    id="tech-stack-filter-container"
+    class="mt-4 opacity-0 transition-opacity"
+  >
     <h2 class="text-lg">Filter by tech:</h2>
     <div class="flex flex-wrap flex-row gap-2" id="tech-stack-filter">
       {
@@ -45,96 +48,96 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
   >
     {sortedProjects.map((project) => <Project {...project} />)}
   </div>
-</BaseLayout>
 
-<script>
-  function setup() {
-    const technologies: string[] = [];
-    const projects = document.querySelectorAll("[data-tech-stack]");
-    const stacks = document.querySelectorAll("#tech-stack-filter svg");
-    stacks.forEach((stack) => {
-      // Remove w and h classes from all stacks
-      stack.classList.remove("w-16", "h-16");
-      stack.classList.add(
-        "w-8",
-        "h-8",
-        "grayscale",
-        "hover:grayscale-0",
-        "hover:scale-125",
-        "cursor-pointer"
-      );
-      // Add click event listener to all stacks
-      stack.addEventListener("click", (e) => {
-        // Get the name
-        let svg = e.target as HTMLElement;
-        while (svg.tagName !== "svg") {
-          svg = svg.parentElement as HTMLElement;
-        }
-
-        const tech = svg.dataset.tech;
-
-        if (tech) {
-          // Toggle the tech in the list
-          const index = technologies.indexOf(tech);
-          if (index === -1) {
-            technologies.push(tech);
-            svg.classList.remove("grayscale");
-            svg.classList.add("scale-110");
-          } else {
-            technologies.splice(index, 1);
-            svg.classList.add("grayscale");
-            svg.classList.remove("scale-110");
+  <script>
+    function setup() {
+      const technologies: string[] = [];
+      const projects = document.querySelectorAll("[data-tech-stack]");
+      const stacks = document.querySelectorAll("#tech-stack-filter svg");
+      stacks.forEach((stack) => {
+        // Remove w and h classes from all stacks
+        stack.classList.remove("w-16", "h-16");
+        stack.classList.add(
+          "w-8",
+          "h-8",
+          "grayscale",
+          "hover:grayscale-0",
+          "hover:scale-125",
+          "cursor-pointer"
+        );
+        // Add click event listener to all stacks
+        stack.addEventListener("click", (e) => {
+          // Get the name
+          let svg = e.target as HTMLElement;
+          while (svg.tagName !== "svg") {
+            svg = svg.parentElement as HTMLElement;
           }
-        }
 
-        // Rerender the projects
-        rerender();
-      });
+          const tech = svg.dataset.tech;
 
-      function rerender() {
-        function showProject(project: HTMLElement) {
-          project.classList.remove("grayscale");
-          project.classList.remove("pointer-events-none");
-          project.classList.remove("opacity-50");
-        }
-
-        function hideProject(project: HTMLElement) {
-          project.classList.add("grayscale");
-          project.classList.add("pointer-events-none");
-          project.classList.add("opacity-50");
-        }
-
-        // Show all the projects if no tech is selected
-        if (technologies.length === 0) {
-          projects.forEach((project) => showProject(project as HTMLElement));
-          return;
-        }
-
-        // Hide all projects
-        projects.forEach((project) => {
-          hideProject(project as HTMLElement);
-        });
-
-        // Show only the projects that have the selected tech
-        projects.forEach((project) => {
-          const techs = (
-            (project as HTMLElement).dataset.techStack ?? ""
-          ).split(",");
-
-          for (const tech of technologies) {
-            if (techs?.includes(tech)) {
-              showProject(project as HTMLElement);
-              break;
+          if (tech) {
+            // Toggle the tech in the list
+            const index = technologies.indexOf(tech);
+            if (index === -1) {
+              technologies.push(tech);
+              svg.classList.remove("grayscale");
+              svg.classList.add("scale-110");
+            } else {
+              technologies.splice(index, 1);
+              svg.classList.add("grayscale");
+              svg.classList.remove("scale-110");
             }
           }
+
+          // Rerender the projects
+          rerender();
         });
-      }
 
-      document
-        .getElementById("tech-stack-filter-container")
-        ?.classList.remove("hidden");
-    });
-  }
+        function rerender() {
+          function showProject(project: HTMLElement) {
+            project.classList.remove("grayscale");
+            project.classList.remove("pointer-events-none");
+            project.classList.remove("opacity-50");
+          }
 
-  document.addEventListener("astro:page-load", setup);
-</script>
+          function hideProject(project: HTMLElement) {
+            project.classList.add("grayscale");
+            project.classList.add("pointer-events-none");
+            project.classList.add("opacity-50");
+          }
+
+          // Show all the projects if no tech is selected
+          if (technologies.length === 0) {
+            projects.forEach((project) => showProject(project as HTMLElement));
+            return;
+          }
+
+          // Hide all projects
+          projects.forEach((project) => {
+            hideProject(project as HTMLElement);
+          });
+
+          // Show only the projects that have the selected tech
+          projects.forEach((project) => {
+            const techs = (
+              (project as HTMLElement).dataset.techStack ?? ""
+            ).split(",");
+
+            for (const tech of technologies) {
+              if (techs?.includes(tech)) {
+                showProject(project as HTMLElement);
+                break;
+              }
+            }
+          });
+        }
+
+        document
+          .getElementById("tech-stack-filter-container")
+          ?.classList.remove("opacity-0");
+      });
+    }
+
+    document.addEventListener("astro:page-load", setup);
+  </script>
+</BaseLayout>

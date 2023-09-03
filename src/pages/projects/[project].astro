@@ -24,11 +24,11 @@ if (!project) {
 }
 ---
 
-<BaseLayout title={project.title} mainClass="flex-grow">
-  <h1 class="text-4xl font-bold" transition:name={project.title}>
+<BaseLayout title={project.title} mainClass="flex-grow w-4/5 min-w-[320px]">
+  <h1 class="text-4xl font-bold">
     {project.title}
   </h1>
-  <h2 class="text-2xl" transition:name={`description:${project.title}`}>
+  <h2 class="text-2xl">
     {project.description}
   </h2>
 
