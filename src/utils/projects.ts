@@ -19,6 +19,59 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Quantum - Job Application & Dashboard",
+    description:
+      "A job application website with a dashboard for the client to manage the applications.",
+    goal: "The client needed a website where users can apply for a job, as well as a dashboard where he can manage the applications.\nThe client picked a template from ThemeForest, but it needed to be changed to match the branding colors of the company.",
+    image: "/images/projects/quantum.png",
+    url: "quantum",
+    date: new Date("2023-08-01"),
+    techStack: [
+      {
+        id: "react",
+        icon: "logos:react",
+        name: "React",
+        description:
+          "React was used for the frontend, since the template was already using it.\nIt allowed me to easily change the colors of the template and create a flexible multi-step form with ease.\nClerk was also used to allow social login which would prefill some data for the user.",
+      },
+      {
+        id: "nextjs",
+        icon: "logos:nextjs-icon",
+        name: "Next.js",
+        description:
+          "Next.js was used for the dashboard.\nThe template the client picked was using React, but I decided to use Next.js instead and leverage its server-side rendering capabilities to easily load job applications from the database and implement authentication in a secure way using NextAuth.js.",
+      },
+      {
+        id: "bootstrap",
+        icon: "logos:bootstrap",
+        name: "Bootstrap",
+        description:
+          "Both templates were using Bootstrap, so there was no need to change it.\nChanging the colors was easy, as I only had to change the variables in the SCSS files.",
+      },
+      {
+        id: "scss",
+        icon: "vscode-icons:file-type-scss",
+        name: "SCSS",
+        description:
+          "Although the templates were already mostly styled, there were some changes that needed to be made to provide the best user experience.\nAdding some animations proved to be a great decision, as it made the website feel more modern and engaging.",
+      },
+      {
+        id: "nodejs",
+        icon: "logos:nodejs-icon",
+        name: "Node.js",
+        description:
+          "In the spirit of using the same language on both frontend and backend, I decided to use Node.js for the backend.\nIt allowed me to easily create an API for uploading files and inserting and fetching data from the database.",
+      },
+      {
+        id: "mongodb",
+        icon: "vscode-icons:file-type-mongo",
+        name: "MongoDB",
+        description:
+          "MongoDB was used for the database, as the form had a lot of dynamic fields and the client wanted to be able to easily add new fields.\nUsing MongoDB allowed me to keep the data in a single collection and not worry about data that had dynamic length (ex. previous work experience).",
+      },
+    ],
+  },
+  {
     title: "SEO Scraper Tool",
     description:
       "A tool to scrape search results from multiple search engines and export them to a CSV file, sorting them by relevance.",
