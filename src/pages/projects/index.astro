@@ -24,10 +24,7 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
 <BaseLayout title="Projects" mainClass="flex-grow" transition:persist>
   <h1 class="text-4xl font-bold">List of projects</h1>
   {/* List of tech stack */}
-  <div
-    id="tech-stack-filter-container"
-    class="mt-4 opacity-0 transition-opacity"
-  >
+  <div class="mt-4">
     <h2 class="text-lg">Filter by tech:</h2>
     <div class="flex flex-wrap flex-row gap-2" id="tech-stack-filter">
       {
@@ -130,10 +127,6 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
             }
           });
         }
-
-        document
-          .getElementById("tech-stack-filter-container")
-          ?.classList.remove("opacity-0");
       });
     }
 
