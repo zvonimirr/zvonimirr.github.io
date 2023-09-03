@@ -92,18 +92,27 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
       });
 
       function rerender() {
+        function showProject(project: HTMLElement) {
+          project.classList.remove("grayscale");
+          project.classList.remove("pointer-events-none");
+          project.classList.remove("opacity-50");
+        }
+
+        function hideProject(project: HTMLElement) {
+          project.classList.add("grayscale");
+          project.classList.add("pointer-events-none");
+          project.classList.add("opacity-50");
+        }
+
         // Show all the projects if no tech is selected
         if (technologies.length === 0) {
-          projects.forEach((project) => {
-            project.classList.remove("hidden");
-          });
-
+          projects.forEach((project) => showProject(project as HTMLElement));
           return;
         }
 
         // Hide all projects
         projects.forEach((project) => {
-          project.classList.add("hidden");
+          hideProject(project as HTMLElement);
         });
 
         // Show only the projects that have the selected tech
@@ -114,7 +123,7 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
 
           for (const tech of technologies) {
             if (techs?.includes(tech)) {
-              project.classList.remove("hidden");
+              showProject(project as HTMLElement);
               break;
             }
           }
