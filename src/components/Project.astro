@@ -1,5 +1,5 @@
 ---
-import { Img } from "astro-imagetools/components";
+import { Image } from "astro:assets";
 import { format } from "date-fns";
 
 const title = Astro.props.title;
@@ -13,7 +13,14 @@ const date = format(Astro.props.date, "MMMM yyyy");
   href={`/projects/${url}`}
   class="flex flex-col bg-gray-100 shadow-md rounded-md p-4 transition-colors duration-500 hover:bg-gray-300"
 >
-  <Img src={image} alt={title} position="top" width={400} height={300} />
+  <Image
+    src={image}
+    alt={title}
+    width={400}
+    height={250}
+    loading="lazy"
+    decoding="async"
+  />
   <div>
     <h1 class="text-2xl font-bold mb-2" transition:name={title}>{title}</h1>
     <p class="text-gray-600 mb-4" transition:name={`description:${title}`}>
@@ -22,3 +29,14 @@ const date = format(Astro.props.date, "MMMM yyyy");
     <span class="text-gray-500 text-sm">{date}</span>
   </div>
 </a>
+
+<style>
+  img {
+    border-radius: 0.5rem;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    margin: 0 auto;
+  }
+</style>
