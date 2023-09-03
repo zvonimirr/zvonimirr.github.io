@@ -4,6 +4,7 @@ import Project from "../../components/Project.astro";
 import { projects } from "../../utils/projects";
 import type { TechStack } from "../../utils/projects";
 import TechStackIcon from "../../components/TechStackIcon.astro";
+import { cn } from "../../utils/cn";
 
 const sortedProjects = projects.sort((a, b) => {
   return b.date.getTime() - a.date.getTime();
@@ -35,7 +36,15 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
             id={tech.id}
             name={tech.icon}
             title={tech.name}
-            class={tech.class}
+            class={cn(
+              tech.class,
+              "w-8",
+              "h-8",
+              "grayscale",
+              "hover:grayscale-0",
+              "hover:scale-125",
+              "cursor-pointer"
+            )}
           />
         ))
       }
@@ -55,16 +64,6 @@ const techList = projects.reduce((acc: Record<string, TechStack>, project) => {
       const projects = document.querySelectorAll("[data-tech-stack]");
       const stacks = document.querySelectorAll("#tech-stack-filter svg");
       stacks.forEach((stack) => {
-        // Remove w and h classes from all stacks
-        stack.classList.remove("w-16", "h-16");
-        stack.classList.add(
-          "w-8",
-          "h-8",
-          "grayscale",
-          "hover:grayscale-0",
-          "hover:scale-125",
-          "cursor-pointer"
-        );
         // Add click event listener to all stacks
         stack.addEventListener("click", (e) => {
           // Get the name

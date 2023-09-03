@@ -5,9 +5,12 @@ import { Icon } from "astro-icon";
 const id = Astro.props.id;
 const title = Astro.props.title;
 const name = Astro.props.name;
-const _class = cn(Astro.props.class, "w-16 h-16");
 ---
 
 <abbr title={title}>
-  <Icon name={name} class={_class} data-tech={id} />
+  <Icon
+    name={name}
+    class={cn("w-16", "h-16", Astro.props.class)}
+    data-tech={id}
+  />
 </abbr>
