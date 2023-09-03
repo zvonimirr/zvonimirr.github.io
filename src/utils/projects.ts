@@ -12,7 +12,8 @@ export type Project = {
   goal: string;
   image: string;
   url: string;
-  date: Date;
+  startDate: Date;
+  endDate: Date;
   techStack: TechStack[];
   projectUrl?: string;
 };
@@ -25,7 +26,8 @@ export const projects: Project[] = [
     goal: "The client sought a website solution enabling job seekers to submit applications seamlessly, complemented by an integrated dashboard for streamlined application management. The initial template selection from ThemeForest was deemed suitable, but adjustments were required to align with the company's branding palette.",
     image: "/images/projects/quantum.png",
     url: "quantum",
-    date: new Date("2023-08-01"),
+    startDate: new Date("2023-07-01"),
+    endDate: new Date("2023-08-01"),
     techStack: [
       {
         id: "react",
@@ -78,7 +80,8 @@ export const projects: Project[] = [
     goal: "The client possessed a list of keywords and expressed the need to determine the ranking of their website for each keyword, as well as the rankings of their competitors. Given the large volume of keywords, the client sought automation for this process. Initially, a Python script was used for this purpose, requiring manual execution. I improved the workflow by developing a contemporary application that automated the entire process, streamlining all necessary tasks.",
     image: "/images/projects/seo-scraper.png",
     url: "seo-scraper",
-    date: new Date("2022-04-01"),
+    startDate: new Date("2022-04-01"),
+    endDate: new Date("2022-04-01"),
     techStack: [
       {
         id: "react",
@@ -118,7 +121,8 @@ export const projects: Project[] = [
     image: "/images/projects/mspf.png",
     url: "mspf",
     projectUrl: "https://miamistreetphotographyfestival.org",
-    date: new Date("2017-06-01"),
+    startDate: new Date("2017-06-01"),
+    endDate: new Date("2017-08-01"),
     techStack: [
       {
         id: "php",
@@ -164,7 +168,8 @@ export const projects: Project[] = [
     goal: "The client had an existing testimonial website with static content that lacked interactivity. Her request was to implement swipeable card elements that supported multiple languages, with user-selectable language options.",
     image: "/images/projects/stacked-cards.png",
     url: "dynamic-swipeable-cards",
-    date: new Date("2020-09-01"),
+    startDate: new Date("2020-09-01"),
+    endDate: new Date("2020-12-01"),
     techStack: [
       {
         id: "react",
@@ -197,7 +202,8 @@ export const projects: Project[] = [
     image: "/images/projects/raise-your-division.png",
     url: "raise-your-division",
     projectUrl: "https://raiseyourdivision.com",
-    date: new Date("2017-09-01"),
+    startDate: new Date("2017-09-01"),
+    endDate: new Date("2017-10-01"),
     techStack: [
       {
         id: "react",
@@ -230,7 +236,8 @@ export const projects: Project[] = [
     image: "/images/projects/wa-link-generator.png",
     url: "wa-link-generator",
     projectUrl: "https://wa-tip.com",
-    date: new Date("2017-12-01"),
+    startDate: new Date("2017-12-01"),
+    endDate: new Date("2017-12-01"),
     techStack: [
       {
         id: "wordpress",
@@ -257,7 +264,8 @@ export const projects: Project[] = [
     image: "/images/projects/phconvert.png",
     url: "phconvert",
     projectUrl: "https://ilovebir.com",
-    date: new Date("2020-10-01"),
+    startDate: new Date("2020-10-01"),
+    endDate: new Date("2020-10-01"),
     techStack: [
       {
         id: "php",
@@ -290,7 +298,8 @@ export const projects: Project[] = [
     image: "/images/projects/indiescreening.png",
     url: "indiescreening",
     projectUrl: "https://indiescreening.com",
-    date: new Date("2020-10-01"),
+    startDate: new Date("2020-10-01"),
+    endDate: new Date("2021-08-01"),
     techStack: [
       {
         id: "drupal",
@@ -345,7 +354,8 @@ export const projects: Project[] = [
     image: "/images/projects/order-tracker.png",
     url: "order-tracker",
     projectUrl: "https://takip.normod.com",
-    date: new Date("2021-08-01"),
+    startDate: new Date("2021-08-01"),
+    endDate: new Date("2021-09-01"),
     techStack: [
       {
         id: "nextjs",

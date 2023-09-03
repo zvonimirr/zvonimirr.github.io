@@ -7,7 +7,7 @@ import TechStackIcon from "../../components/TechStackIcon.astro";
 import { cn } from "../../utils/cn";
 
 const sortedProjects = projects.sort((a, b) => {
-  return b.date.getTime() - a.date.getTime();
+  return b.endDate.getTime() - a.endDate.getTime();
 });
 
 const techList = projects.reduce((acc: Record<string, TechStack>, project) => {

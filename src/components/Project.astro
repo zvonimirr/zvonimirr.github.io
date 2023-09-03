@@ -7,7 +7,8 @@ const title = Astro.props.title;
 const description = Astro.props.description;
 const image = Astro.props.image;
 const url = Astro.props.url;
-const date = format(Astro.props.date, "MMMM yyyy");
+const startingDate = format(Astro.props.startDate, "MMMM yyyy");
+const endingDate = format(Astro.props.endDate, "MMMM yyyy");
 const techStack = Astro.props.techStack
   .map((tech: TechStack) => tech.id)
   .join(",");
@@ -31,7 +32,7 @@ const techStack = Astro.props.techStack
     <p class="text-gray-600 mb-4">
       {description}
     </p>
-    <span class="text-gray-500 text-sm">{date}</span>
+    <span class="text-gray-500 text-sm">{startingDate} - {endingDate}</span>
   </div>
 </a>
 
