@@ -32,6 +32,25 @@ if (!project) {
     {project.description}
   </h2>
 
+  {
+    project.review && (
+      <div class="mt-4">
+        <h3 class="text-3xl font-bold">Review</h3>
+        <blockquote class="text-lg">
+          {project.review.text.split("\n").map((paragraph) => (
+            <>
+              {paragraph}
+              <br />
+            </>
+          ))}
+          <footer class="text-lg">
+            <cite>—{project.review.name}</cite>
+          </footer>
+        </blockquote>
+      </div>
+    )
+  }
+
   <h3 class="text-3xl font-bold mt-4">Tech Stack</h3>
   <div id="tech-stack">
     {

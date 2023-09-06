@@ -1,3 +1,8 @@
+type Review = {
+  name: string;
+  text: string;
+};
+
 export type TechStack = {
   id: string;
   icon: string;
@@ -16,6 +21,7 @@ export type Project = {
   endDate: Date;
   techStack: TechStack[];
   projectUrl?: string;
+  review?: Review;
 };
 
 export const projects: Project[] = [
@@ -123,6 +129,10 @@ export const projects: Project[] = [
     projectUrl: "https://miamistreetphotographyfestival.org",
     startDate: new Date("2017-06-01"),
     endDate: new Date("2017-08-01"),
+    review: {
+      name: "Juan",
+      text: "I highly recommend Zvonimir.\nHe upgraded our website in a very timely manner and it works great.\nHe is a highly knowledgeable and skilled developer and I would recommend him.",
+    },
     techStack: [
       {
         id: "php",
@@ -170,6 +180,10 @@ export const projects: Project[] = [
     url: "dynamic-swipeable-cards",
     startDate: new Date("2020-09-01"),
     endDate: new Date("2020-12-01"),
+    review: {
+      text: "Great collaboration, good communication and fast follow-up. Thanks!",
+      name: "Eva",
+    },
     techStack: [
       {
         id: "react",
@@ -238,6 +252,10 @@ export const projects: Project[] = [
     projectUrl: "https://wa-tip.com",
     startDate: new Date("2017-12-01"),
     endDate: new Date("2017-12-01"),
+    review: {
+      name: "Roy",
+      text: "Zvonimir is quick, professional, communicative and I enjoyed working with him.",
+    },
     techStack: [
       {
         id: "wordpress",
@@ -266,6 +284,10 @@ export const projects: Project[] = [
     projectUrl: "https://ilovebir.com",
     startDate: new Date("2020-10-01"),
     endDate: new Date("2020-10-01"),
+    review: {
+      name: "Jennifer",
+      text: "His knowledge and skills are incredibly valuable to any web development team.\nKudos for his hard work and excellent communication.",
+    },
     techStack: [
       {
         id: "php",
@@ -300,6 +322,10 @@ export const projects: Project[] = [
     projectUrl: "https://indiescreening.com",
     startDate: new Date("2020-10-01"),
     endDate: new Date("2021-08-01"),
+    review: {
+      name: "Dale Okorodudu, MD",
+      text: "Definitely hire Zvonimir! Wonderful. I plan to rehire him!",
+    },
     techStack: [
       {
         id: "drupal",
