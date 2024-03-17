@@ -1,16 +1,25 @@
 ---
-
+import { SEO } from "astro-seo";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/font.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      charset="utf-8"
+      title="Zvonimir Rudinski | Full Stack Developer"
+      description="Looking for a fully commited developer who can digitalize your business and make it more efficient? Look no further, I am here to help you!"
+      twitter={{
+        creator: "@rudinskiz",
+      }}
+    />
+  </head>
+  <body class="bg-primary m-12">
+    <h1 class="text-4xl text-secondary font-squada">
+      $ Zvonimir Rudinski / Home
+    </h1>
+  </body>
 </html>
