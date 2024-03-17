@@ -17,29 +17,66 @@ const { title, hasBorder } = Astro.props;
     </h2>
   </abbr>
 
-  <div
-    class={`text-white hidden group-[.open]:block ${
-      hasBorder ? "border-l-4 my-2 pl-4" : ""
-    }`}
-  >
+  <div class={`text-white hidden ${hasBorder ? "border-l-4 my-2 pl-4" : ""}`}>
     <slot />
   </div>
 </astro-section>
 
 <script>
   class Section extends HTMLElement {
+    container: HTMLElement;
+
     constructor() {
       super();
+
+      const container = this.querySelector("div");
+      if (!container) {
+        throw new Error("No container found");
+      }
+
+      this.container = container;
 
       this.addEventListener("click", () => {
         // Close all other sections
         document
           .querySelectorAll(`astro-section:not(#${this.id})`)
-          .forEach((section) => section.classList.remove("open"));
+          .forEach((section) => {
+            const container = section.querySelector("div");
+            if (!container) {
+              throw new Error("No container found");
+            }
 
-        // Open this section
-        this.classList.toggle("open");
+            this.collapse(section, container);
+          });
+
+        // Check if the section is open
+        if (this.classList.contains("open")) {
+          this.collapse(this, this.container);
+        } else {
+          this.extend(this, this.container);
+        }
       });
+    }
+
+    extend(section: Element, container: HTMLElement) {
+      container.classList.remove("animate-collapse");
+      container.classList.remove("hidden");
+      container.classList.add("animate-extend");
+
+      setTimeout(() => {
+        section.classList.add("open");
+        container.classList.remove("hidden");
+      }, 500);
+    }
+
+    collapse(section: Element, container: HTMLElement) {
+      container.classList.remove("animate-extend");
+      container.classList.add("animate-collapse");
+
+      setTimeout(() => {
+        section.classList.remove("open");
+        container.classList.add("hidden");
+      }, 500);
     }
   }
 
