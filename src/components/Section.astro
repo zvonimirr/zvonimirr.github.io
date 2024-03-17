@@ -7,7 +7,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<section id={slugify(title)}>
+<astro-section id={slugify(title)} class="group">
   <abbr title="Press to open">
     <h2
       class="text-xl text-white lowercase transition-colors opacity-80 hover:text-secondary hover:cursor-pointer"
@@ -16,9 +16,27 @@ const { title } = Astro.props;
     </h2>
   </abbr>
 
-  <div class="hidden">
+  <div class="text-white hidden group-[.open]:block">
     <slot />
   </div>
-</section>
+</astro-section>
 
-<script></script>
+<script>
+  class Section extends HTMLElement {
+    constructor() {
+      super();
+
+      this.addEventListener("click", () => {
+        // Close all other sections
+        document
+          .querySelectorAll(`astro-section:not(#${this.id})`)
+          .forEach((section) => section.classList.remove("open"));
+
+        // Open this section
+        this.classList.toggle("open");
+      });
+    }
+  }
+
+  customElements.define("astro-section", Section);
+</script>
