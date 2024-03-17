@@ -2,21 +2,26 @@
 import { slugify } from "../utils";
 interface Props {
   title: string;
+  hasBorder?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, hasBorder } = Astro.props;
 ---
 
 <astro-section id={slugify(title)} class="group">
   <abbr title="Press to open">
     <h2
-      class="text-xl text-white lowercase transition-colors opacity-80 hover:text-secondary hover:cursor-pointer"
+      class="text-xl text-white lowercase transition-colors opacity-80 group-[.open]:text-secondary group-[.open]:underline hover:text-secondary hover:cursor-pointer"
     >
       {title}
     </h2>
   </abbr>
 
-  <div class="text-white hidden group-[.open]:block">
+  <div
+    class={`text-white hidden group-[.open]:block ${
+      hasBorder ? "border-l-4 my-2 pl-4" : ""
+    }`}
+  >
     <slot />
   </div>
 </astro-section>
