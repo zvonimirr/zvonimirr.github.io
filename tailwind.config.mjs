@@ -11,6 +11,7 @@ export default {
       },
       fontFamily: {
         squada: ["SquadaOne", ...defaultTheme.fontFamily.sans],
+        "pt-sans": ["PTSans", ...defaultTheme.fontFamily.sans],
       },
       transitionProperty: {
         "max-height": "max-height",
