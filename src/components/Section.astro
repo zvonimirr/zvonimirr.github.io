@@ -11,7 +11,7 @@ const { title, hasBorder } = Astro.props;
 <astro-section id={slugify(title)} class="group">
   <abbr title="Press to open">
     <h2
-      class="text-xl text-white lowercase transition-colors opacity-80 group-[.open]:text-secondary group-[.open]:underline hover:text-secondary hover:cursor-pointer"
+      class="text-xl text-white lowercase transition-colors opacity-60 hover:text-secondary hover:cursor-pointer hover:opacity-80 group-[.open]:text-secondary group-[.open]:underline group-[.open]:opacity-100"
     >
       {title}
     </h2>
