@@ -91,16 +91,20 @@ const image = (await import(`../../assets/${project.id}.png`)).default;
         }
       </Section>
 
-      <Section title="URL">
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="font-pt-sans text-secondary hover:text-white hover:underline transition-colors"
-        >
-          {project.url}
-        </a>
-      </Section>
+      {
+        project.url && (
+          <Section title="URL">
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-pt-sans text-secondary hover:text-white hover:underline transition-colors"
+            >
+              {project.url}
+            </a>
+          </Section>
+        )
+      }
     </main>
 
     <footer class="mt-12">

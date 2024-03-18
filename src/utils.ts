@@ -14,6 +14,7 @@ export const StackItems = {
   Redis: "Redis",
   Firebase: "Firebase",
   GoogleSheets: "Google Sheets",
+  NodeJS: "NodeJS",
 };
 
 type StackItem = keyof typeof StackItems;
@@ -34,6 +35,7 @@ const icons: Record<StackItem, string> = {
   Redis: "logos:redis",
   Firebase: "logos:firebase",
   GoogleSheets: "devicon:googlecloud",
+  NodeJS: "vscode-icons:file-type-node",
 };
 
 export function slugify(str: string) {
