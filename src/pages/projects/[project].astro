@@ -1,0 +1,102 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Image } from "astro:assets";
+import { SEO } from "astro-seo";
+import { getProject, projects } from "../../projects";
+import Section from "../../components/Section.astro";
+import { Icon } from "astro-icon/components";
+
+export const getStaticPaths = (() => {
+  return projects.map(({ id }) => ({
+    params: { project: id },
+  }));
+}) satisfies GetStaticPaths;
+
+const project = getProject(Astro.params.project);
+const image = (await import(`../../assets/${project.id}.png`)).default;
+---
+
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/font.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      charset="utf-8"
+      title={`${project.name} | Zvonimir Rudinski`}
+      description={project.description}
+      twitter={{
+        card: "summary",
+        creator: "@zvonimirr",
+        title: `${project.name} | Zvonimir Rudinski`,
+        description: project.description,
+        image: `https://zvonimirr.github.io/projects/${project.id}.png`,
+      }}
+    />
+  </head>
+  <body class="bg-primary m-12">
+    <h1 class="text-2xl md:text-4xl text-secondary font-squada">
+      $ Zvonimir Rudinski / Projects / {project.name}
+    </h1>
+
+    <a
+      href="/"
+      class="font-pt-sans text-white hover:text-secondary hover:text-underline transition-colors"
+    >
+      ← Back to Home</a
+    >
+
+    <main class="font-pt-sans text-white mt-4">
+      <p class="my-4 opacity-60">
+        {project.startDate} - {project.endDate}
+      </p>
+
+      <p>{project.description}</p>
+      <Image src={image} alt={project.name} class="my-8" />
+
+      {
+        project.review && (
+          <Section title="Review">
+            <p class="font-pt-sans mt-2">{project.review.review}</p>
+            <cite class="block text-secondary">{project.review.client}</cite>
+          </Section>
+        )
+      }
+
+      <Section title="Solution">
+        {
+          project.stack.map((stack) => (
+            <div>
+              <p class="font-pt-sans flex items-center gap-2">
+                <Icon name={stack.icon} size={48} />
+                {stack.name}
+              </p>
+
+              <div class="my-2">
+                {stack.explanation.split("\n").map((line) => (
+                  <p class="font-pt-sans">{line}</p>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </Section>
+
+      <Section title="URL">
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-pt-sans text-secondary hover:text-white hover:underline transition-colors"
+        >
+          {project.url}
+        </a>
+      </Section>
+    </main>
+
+    <footer class="mt-12">
+      <p class="text-secondary text-center">&copy; 2024 Zvonimir Rudinski</p>
+    </footer>
+  </body>
+</html>

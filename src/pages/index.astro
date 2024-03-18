@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import { Icon } from "astro-icon/components";
 import Section from "../components/Section.astro";
+import { projects } from "../projects";
 ---
 
 <html lang="en">
@@ -48,7 +49,24 @@ import Section from "../components/Section.astro";
     </Section>
 
     <Section title="Projects" hasBorder>
-      <p>Kekw</p>
+      <p class="font-pt-sans">
+        Here are some of the projects I have worked on. You can find more
+        information about a project by clicking on its name.
+      </p>
+      <ul class="list-disc list-inside mt-2">
+        {
+          projects.map((project) => (
+            <li>
+              <a
+                href={`/projects/${project.id}`}
+                class="font-pt-sans text-secondary hover:underline"
+              >
+                {project.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </Section>
 
     <Section title="Contact">
