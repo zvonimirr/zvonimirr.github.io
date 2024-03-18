@@ -55,6 +55,14 @@ const image = (await import(`../../assets/${project.id}.png`)).default;
       <p>{project.description}</p>
       <Image src={image} alt={project.name} class="my-8" />
 
+      <Section title="Project Goal">
+        {
+          project.goal
+            .split("\n")
+            .map((line) => <p class="font-pt-sans my-2">{line}</p>)
+        }
+      </Section>
+
       {
         project.review && (
           <Section title="Review">
