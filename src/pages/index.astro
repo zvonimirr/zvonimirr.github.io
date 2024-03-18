@@ -105,5 +105,11 @@ import { projects } from "../projects";
     <footer class="mt-12">
       <p class="text-secondary text-center">&copy; 2024 Zvonimir Rudinski</p>
     </footer>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelector<HTMLElement>("#projects h2")?.click();
+      });
+    </script>
   </body>
 </html>
