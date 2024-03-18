@@ -10,20 +10,6 @@ interface ProjectReview {
   review: string;
 }
 
-export enum StackItem {
-  PHP = "PHP",
-  JavaScript = "JavaScript",
-  MySQL = "MySQL",
-  MaterializeCSS = "MaterializeCSS",
-  PayPal = "PayPal",
-  React = "React",
-  AntDesign = "AntDesign",
-  TypeScript = "TypeScript",
-  Drupal = "Drupal",
-  Twig = "Twig",
-  Bootstrap = "Bootstrap",
-}
-
 export interface ProjectStackItem {
   icon: string;
   name: string;
@@ -44,8 +30,9 @@ interface Project extends ProjectPeek {
 }
 
 // Projects. Stack follows the following format:
-// - languages
+// - cms
 // - frameworks
+// - languages
 // - libraries
 // - databases
 // - tools
@@ -64,23 +51,23 @@ export const projects: Project[] = [
 
     stack: [
       getStackItem(
-        StackItem.PHP,
+        "PHP",
         "Given the website's existing PHP foundation, I elected to maintain continuity by retaining PHP as the development language.\nTo address the prevalent issues stemming from deprecated functions and widespread errors due to the upgrade to PHP 7, I performed a comprehensive code revision.\nIn addition, I introduced a newly designed admin dashboard, facilitating effortless voting processes for both the client and judges."
       ),
       getStackItem(
-        StackItem.JavaScript,
+        "JavaScript",
         "At the outset of my engagement with the website, its JavaScript functionality was minimal.\nI embarked on enhancing the user experience by introducing elements of interactivity, including the incorporation of a countdown timer and the implementation of a gallery feature."
       ),
       getStackItem(
-        StackItem.MySQL,
+        "MySQL",
         "While the website had previously employed MySQL, a code upgrade was necessary to incorporate the latest version of the MySQLi extension, as the prior version had become deprecated.\nAdditionally, I conducted database optimization measures by eliminating extraneous tables and enhancing security by transitioning from plaintext password storage to the more secure practice of password hashing."
       ),
       getStackItem(
-        StackItem.MaterializeCSS,
+        "MaterializeCSS",
         "Materialize was adopted for the admin dashboard's frontend interface due to its user-friendly nature and capacity to deliver a visually streamlined appearance.\nThis choice expedited the creation of a responsive user interface, a critical consideration given that the dashboard was intended for use by individuals on mobile devices."
       ),
       getStackItem(
-        StackItem.PayPal,
+        "PayPal",
         "The client had expressed a preference for PayPal as the payment gateway for the website.\nI integrated PayPal's REST API, enabling the website to accept payments for contest submissions."
       ),
     ],
@@ -106,15 +93,15 @@ export const projects: Project[] = [
 
     stack: [
       getStackItem(
-        StackItem.React,
+        "PHP",
         "Given the absence of a need for server-side logic, I opted for React to develop the frontend.\nThis choice proved highly advantageous, particularly because the application entailed the creation of multiple forms, each sharing common components but demanding distinct logic."
       ),
       getStackItem(
-        StackItem.AntDesign,
+        "React",
         "In the absence of specific design guidelines or client-provided requirements, I made the deliberate choice to employ Ant Design for the user interface.\nThis strategic decision enabled me to streamline the development process, shifting the emphasis away from design intricacies and towards the implementation of robust functionality."
       ),
       getStackItem(
-        StackItem.PayPal,
+        "PayPal",
         "The client expressed a preference for PayPal as the payment gateway, leading me to integrate it using their JavaScript SDK.\nThis choice was endorsed by PayPal themselves, reflecting its reliability and ease of integration, ensuring a seamless payment experience within the application."
       ),
     ],
@@ -135,15 +122,15 @@ export const projects: Project[] = [
 
     stack: [
       getStackItem(
-        StackItem.PHP,
+        "PHP",
         "In response to the client's desire for a user-friendly and accessible tool, I opted to develop it as a web application.\nLeveraging the client's existing hosting infrastructure, which provided support for PHP, I selected PHP as the backend technology.\nGiven the tool's relatively simple structure with only a few pages, I made the decision not to employ a framework, ensuring a streamlined and efficient development process."
       ),
       getStackItem(
-        StackItem.JavaScript,
+        "JavaScript",
         "JavaScript played a pivotal role in enhancing the user experience of the application.\nIt was employed to introduce interactive elements, including the display of a loading indicator to signify ongoing file conversion processes.\nAdditionally, JavaScript facilitated the seamless resetting of the form after successful file conversion, further optimizing the overall usability of the tool."
       ),
       getStackItem(
-        StackItem.MaterializeCSS,
+        "MaterializeCSS",
         "Materialize was the UI framework of choice due to its user-friendly nature and capacity to deliver a clean and aesthetically pleasing design.\nThis selection expedited the development process by facilitating the creation of a responsive user interface, a pivotal element given the application's need to cater to users across various devices and screen sizes."
       ),
     ],
@@ -168,27 +155,27 @@ export const projects: Project[] = [
 
     stack: [
       getStackItem(
-        StackItem.Drupal,
+        "Drupal",
         "Drupal 9 emerged as the preferred Content Management System (CMS) for the website, primarily owing to its remarkable flexibility and extensive library of modules capable of augmenting its capabilities.\nAt the core of the website's functionality lies Drupal Commerce, a pivotal plugin that underpins the majority of its features.\nAdditionally, custom modules were thoughtfully developed to address unique scenarios and specific demands, ensuring a tailored and comprehensive solution for the platform."
       ),
       getStackItem(
-        StackItem.Twig,
+        "Twig",
         "Twig was the natural choice for crafting the website's theme, given its status as the default templating engine for Drupal.\nThis decision facilitated the creation of a theme characterized by its cleanliness, ease of maintenance, and exceptional modularity, aligning seamlessly with one of the project's core requirements."
       ),
       getStackItem(
-        StackItem.Bootstrap,
+        "Bootstrap",
         "Bootstrap was instrumental in crafting a responsive, mobile-first theme for the website, characterized by its ease of maintenance and extensibility.\nThe adoption of a well-established framework such as Bootstrap alleviated the need for extensive design considerations, enabling a shift in focus towards the implementation of robust functionality within the website."
       ),
       getStackItem(
-        StackItem.TypeScript,
+        "TypeScript",
         "TypeScript was strategically employed within the custom modules to imbue the codebase with a layer of type safety, enhancing maintainability.\nThis decision not only ensured code robustness but also afforded the flexibility to harness the latest JavaScript features, further enhancing the overall quality and future-proofing of the project."
       ),
       getStackItem(
-        StackItem.MySQL,
+        "MySQL",
         "MySQL was strategically chosen as the optimal database solution for this project, owing to its widespread acclaim and remarkable proficiency in the management and storage of data.\nThis selection seamlessly harmonized with the project's prerequisites, guaranteeing a resilient infrastructure for data storage and retrieval, thereby fostering scalability and maintainability.\nIt is worth noting that this decision is further bolstered by Drupal's strong compatibility and support for MySQL, reinforcing the synergy between our chosen technology stack and the website's platform."
       ),
       getStackItem(
-        StackItem.PayPal,
+        "PayPal",
         "PayPal emerged as the preferred payment gateway for the website, in line with the client's preference.\nIts selection was driven by its seamless integration capabilities with Drupal Commerce.\nTo facilitate this integration, a custom module was meticulously developed, ensuring a smooth and secure payment processing experience for users engaging with the platform."
       ),
     ],
@@ -197,6 +184,42 @@ export const projects: Project[] = [
       review: "Definitely hire Zvonimir! Wonderful. I plan to rehire him!",
     },
     url: "https://indiescreening.com",
+  },
+  // ----------------------------------------------
+  {
+    id: "normod-order-tracker",
+    name: "Normod Order Tracker",
+
+    description:
+      "A comprehensive order tracking system designed for a business operating in Istanbul, Turkey, featuring an administrative dashboard tailored for efficient courier management.",
+    goal: "The client's project encompassed the development of a user-friendly website to cater to customers seeking order tracking capabilities, alongside an administrative dashboard tailored for efficient order management by couriers.\nWith a target audience in Turkey, the website was designed to be in the Turkish language, and great emphasis was placed on delivering a clean and intuitive user interface to enhance usability.",
+
+    startDate: "August 2021",
+    endDate: "September 2021",
+
+    stack: [
+      getStackItem(
+        "NextJS",
+        "In pursuit of a contemporary and high-performance website, I made the strategic choice to employ Next.js for the frontend development.\nThis framework provided the ideal foundation for crafting a swift, SEO-optimized website while simultaneously enhancing the developer experience, ensuring that the final product met the client's requirements for modernity and speed."
+      ),
+      getStackItem(
+        "TypeScript",
+        "Given the inherent advantages of Next.js, TypeScript was a natural and prudent selection to enforce type safety and streamline the refactoring process.\nTo enhance code management and maintain the integration of style and logic, I incorporated Styled Components for styling, facilitating the cohesiveness of both aspects within a single file and ensuring effective code separation."
+      ),
+      getStackItem(
+        "Redis",
+        "Redis played a pivotal role in the optimization of the website's performance.\nBy implementing Redis to cache data sourced from the Google Sheets API, the frequency of API requests was significantly reduced.\nThis caching mechanism not only alleviated the strain on external API resources but also led to noticeable improvements in the website's overall responsiveness and speed."
+      ),
+      getStackItem(
+        "Firebase",
+        "Firebase was predominantly harnessed for two key functions within the project.\nFirstly, it served as a robust authentication solution, ensuring secure user access to the platform.\nAdditionally, Firebase was employed for the storage of images captured by couriers during the order delivery process.\nThe decision to utilize Firebase was further bolstered by its reputation for offering an expansive and accommodating free tier, aligning perfectly with the project's requirements."
+      ),
+      getStackItem(
+        "GoogleSheets",
+        "Building upon the client's existing workflow, I seamlessly integrated the Google Sheets API into the project to fetch order data.\nThis strategic choice not only expedited development but also ensured that the website remained fast and user-friendly.\nImportantly, it obviated the need for data migration to a traditional database, preserving the client's preferred data management system while achieving the desired functionality."
+      ),
+    ],
+    url: "https://takip.normod.com",
   },
 ].reverse(); // reverse to display the most recent project first
 
