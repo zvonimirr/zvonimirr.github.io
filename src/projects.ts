@@ -18,6 +18,10 @@ export enum StackItem {
   PayPal = "PayPal",
   React = "React",
   AntDesign = "AntDesign",
+  TypeScript = "TypeScript",
+  Drupal = "Drupal",
+  Twig = "Twig",
+  Bootstrap = "Bootstrap",
 }
 
 export interface ProjectStackItem {
@@ -120,7 +124,7 @@ export const projects: Project[] = [
   // ----------------------------------------------
   {
     id: "ph-convert",
-    name: "PH Convert",
+    name: "PHConvert",
 
     description:
       "An application designed to facilitate the conversion of Excel templates into a file format compliant with the requirements of the Filipino government for tax-related purposes.",
@@ -149,6 +153,50 @@ export const projects: Project[] = [
         "His knowledge and skills are incredibly valuable to any web development team.\nKudos for his hard work and excellent communication.",
     },
     url: "https://phconvert.com",
+  },
+  // ----------------------------------------------
+  {
+    id: "indiescreening",
+    name: "IndieScreening",
+
+    description:
+      "A dedicated platform designed to provide independent filmmakers with a stage to exhibit and share their creative works.",
+    goal: "The client's imperative was the creation of a top-tier website that would serve as both a showcase for their own cinematic endeavors and a collaborative platform for fellow filmmakers.\nThe website's multifaceted functionality encompassed not only the exhibition of the client's work and enabling user purchases but also providing a space for other filmmakers to spotlight their creations.\nKey functionalities included robust payment processing capabilities to facilitate film sales and the incorporation of a multi-role user system to accommodate various user categories, ensuring a seamless and inclusive platform experience for both filmmakers and film enthusiasts alike.",
+
+    startDate: "October 2020",
+    endDate: "August 2021",
+
+    stack: [
+      getStackItem(
+        StackItem.Drupal,
+        "Drupal 9 emerged as the preferred Content Management System (CMS) for the website, primarily owing to its remarkable flexibility and extensive library of modules capable of augmenting its capabilities.\nAt the core of the website's functionality lies Drupal Commerce, a pivotal plugin that underpins the majority of its features.\nAdditionally, custom modules were thoughtfully developed to address unique scenarios and specific demands, ensuring a tailored and comprehensive solution for the platform."
+      ),
+      getStackItem(
+        StackItem.Twig,
+        "Twig was the natural choice for crafting the website's theme, given its status as the default templating engine for Drupal.\nThis decision facilitated the creation of a theme characterized by its cleanliness, ease of maintenance, and exceptional modularity, aligning seamlessly with one of the project's core requirements."
+      ),
+      getStackItem(
+        StackItem.Bootstrap,
+        "Bootstrap was instrumental in crafting a responsive, mobile-first theme for the website, characterized by its ease of maintenance and extensibility.\nThe adoption of a well-established framework such as Bootstrap alleviated the need for extensive design considerations, enabling a shift in focus towards the implementation of robust functionality within the website."
+      ),
+      getStackItem(
+        StackItem.TypeScript,
+        "TypeScript was strategically employed within the custom modules to imbue the codebase with a layer of type safety, enhancing maintainability.\nThis decision not only ensured code robustness but also afforded the flexibility to harness the latest JavaScript features, further enhancing the overall quality and future-proofing of the project."
+      ),
+      getStackItem(
+        StackItem.MySQL,
+        "MySQL was strategically chosen as the optimal database solution for this project, owing to its widespread acclaim and remarkable proficiency in the management and storage of data.\nThis selection seamlessly harmonized with the project's prerequisites, guaranteeing a resilient infrastructure for data storage and retrieval, thereby fostering scalability and maintainability.\nIt is worth noting that this decision is further bolstered by Drupal's strong compatibility and support for MySQL, reinforcing the synergy between our chosen technology stack and the website's platform."
+      ),
+      getStackItem(
+        StackItem.PayPal,
+        "PayPal emerged as the preferred payment gateway for the website, in line with the client's preference.\nIts selection was driven by its seamless integration capabilities with Drupal Commerce.\nTo facilitate this integration, a custom module was meticulously developed, ensuring a smooth and secure payment processing experience for users engaging with the platform."
+      ),
+    ],
+    review: {
+      client: "Dale Okorodudu, MD",
+      review: "Definitely hire Zvonimir! Wonderful. I plan to rehire him!",
+    },
+    url: "https://indiescreening.com",
   },
 ].reverse(); // reverse to display the most recent project first
 

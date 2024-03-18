@@ -69,7 +69,7 @@ const { title, hasBorder } = Astro.props;
     }
 
     extend(section: Element, container: HTMLElement) {
-      container.style.maxHeight = document.documentElement.scrollHeight + "px";
+      container.style.maxHeight = "1000vh";
       section.classList.add("open");
     }
 

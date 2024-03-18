@@ -8,6 +8,10 @@ const icons: Record<StackItem, string> = {
   PayPal: "logos:paypal",
   React: "logos:react",
   AntDesign: "devicon:antdesign",
+  TypeScript: "vscode-icons:file-type-typescript-official",
+  Drupal: "logos:drupal-icon",
+  Twig: "vscode-icons:file-type-twig",
+  Bootstrap: "skill-icons:bootstrap",
 };
 
 export function slugify(str: string) {

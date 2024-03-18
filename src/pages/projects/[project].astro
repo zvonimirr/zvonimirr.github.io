@@ -75,7 +75,7 @@ const image = (await import(`../../assets/${project.id}.png`)).default;
       <Section title="Solution">
         {
           project.stack.map((stack) => (
-            <div>
+            <div class="my-4">
               <p class="font-pt-sans flex items-center gap-2">
                 <Icon name={stack.icon} size={48} />
                 {stack.name}
