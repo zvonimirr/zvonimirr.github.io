@@ -252,6 +252,45 @@ export const projects: Project[] = [
       ),
     ],
   },
+  // ----------------------------------------------
+  {
+    id: "quantum",
+    name: "Quantum - Job Application & Dashboard",
+
+    description:
+      "A web-based employment application platform featuring a user-friendly dashboard for clients to efficiently oversee and manage submitted job applications.",
+    goal: "The client sought a website solution enabling job seekers to submit applications seamlessly, complemented by an integrated dashboard for streamlined application management.\nThe initial template selection from ThemeForest was deemed suitable, but adjustments were required to align with the company's branding palette.",
+
+    startDate: "April 2022",
+    endDate: "April 2022",
+
+    stack: [
+      getStackItem(
+        "React",
+        "React was employed for the frontend development due to its compatibility with the preexisting template, facilitating efficient color customization and the seamless creation of a versatile multi-step form.\nAdditionally, Clerk was integrated to enable social login functionality, enhancing user convenience by automatically populating certain user data."
+      ),
+      getStackItem(
+        "NextJS",
+        "Next.js was employed for the development of the dashboard.\nWhile the client's chosen template was originally built with React, I opted to utilize Next.js, harnessing its server-side rendering capabilities.\nThis choice facilitated efficient retrieval of job applications from the database and the implementation of secure authentication via NextAuth.js."
+      ),
+      getStackItem(
+        "Bootstrap",
+        "Both templates were already utilizing Bootstrap, obviating the necessity for alterations in this regard.\nThe process of color customization proved straightforward, as it entailed the modification of variables within the SCSS files."
+      ),
+      getStackItem(
+        "SCSS",
+        "While the templates possessed a pre-existing style foundation, certain adjustments were deemed imperative to enhance the overall user experience.\nThe incorporation of animations emerged as a particularly beneficial decision, imbuing the website with a contemporary and engaging ambiance."
+      ),
+      getStackItem(
+        "NodeJS",
+        "To maintain consistency in the technology stack between the frontend and backend, I opted for Node.js for the backend development.\nThis choice facilitated the seamless creation of an API for tasks such as file uploads and database interaction, ensuring a harmonious and efficient system."
+      ),
+      getStackItem(
+        "MongoDB",
+        "MongoDB was selected as the database solution, primarily due to the form's extensive use of dynamic fields and the client's requirement for the effortless addition of new fields.\nLeveraging MongoDB enabled the consolidation of data within a single collection, alleviating concerns related to dynamic data length, such as previous work experience entries."
+      ),
+    ],
+  },
 ].reverse(); // reverse to display the most recent project first
 
 export function getProject(id: string): Project {
