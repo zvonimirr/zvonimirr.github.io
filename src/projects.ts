@@ -93,11 +93,11 @@ export const projects: Project[] = [
 
     stack: [
       getStackItem(
-        "PHP",
+        "React",
         "Given the absence of a need for server-side logic, I opted for React to develop the frontend.\nThis choice proved highly advantageous, particularly because the application entailed the creation of multiple forms, each sharing common components but demanding distinct logic."
       ),
       getStackItem(
-        "React",
+        "AntDesign",
         "In the absence of specific design guidelines or client-provided requirements, I made the deliberate choice to employ Ant Design for the user interface.\nThis strategic decision enabled me to streamline the development process, shifting the emphasis away from design intricacies and towards the implementation of robust functionality."
       ),
       getStackItem(
